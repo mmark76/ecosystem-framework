@@ -1,0 +1,34 @@
+# Documentation Index
+
+## Product
+- `product/PROJECT_BRIEF.md`
+- `product/RELEASE_SCOPE.md`
+
+## Requirements
+- `requirements/OBJECTIVES.md`
+- `requirements/ACCEPTANCE_CRITERIA.md`
+- `requirements/TRACEABILITY_MATRIX.md`
+
+## Architecture
+- `architecture/SYSTEM_ARCHITECTURE.md`
+- `architecture/ARCHITECTURE_DECISIONS.md`
+
+## Security
+- `security/SECURITY_PLAN.md`
+- `security/THREAT_MODEL.md`
+
+## Data
+- `data/DATA_PLAN.md`
+
+## Testing
+- `testing/TEST_STRATEGY.md`
+
+## Operations
+- `operations/OPERATIONS_AND_RECOVERY.md`
+
+## Governance
+- `governance/RISK_REGISTER.md`
+- `governance/EXCEPTIONS.md`
+
+## Completion
+- `completion/COMPLETION_REPORT.md`
