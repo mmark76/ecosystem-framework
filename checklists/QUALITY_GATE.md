@@ -8,6 +8,11 @@
 - [ ] API tests pass where required.
 - [ ] End-to-end critical journeys pass.
 - [ ] Accessibility checks pass where applicable.
+- [ ] Manual keyboard, focus, contrast, scaling, and target-size checks pass where applicable.
+- [ ] Responsive layouts pass at the required narrow, medium, and wide sizes.
+- [ ] Required loading, empty, error, offline, and success states pass.
+- [ ] Greek and English content passes where supported.
+- [ ] Approved design tokens, theme, and shared components are used.
 - [ ] Performance criteria pass where defined.
 - [ ] Build succeeds.
 - [ ] Static analysis passes.
