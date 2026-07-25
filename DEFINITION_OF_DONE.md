@@ -24,12 +24,27 @@ A task is `COMPLETE` only when all applicable conditions below are satisfied.
 - No secrets or sensitive data were exposed.
 - Data, privacy, logging, and retention requirements are satisfied.
 
+## UI/UX and Accessibility
+
+For every user-facing change:
+
+- `UI_UX_RULES.md` and the approved app theme are followed.
+- Semantic design tokens are used; no arbitrary ecosystem-wide values were introduced.
+- Existing shared components are reused where appropriate.
+- Required loading, empty, error, offline, and success states are handled.
+- Narrow, medium, and wide layouts are verified where applicable.
+- Keyboard operation, focus visibility and order, contrast, text scaling, touch targets, and reduced motion are verified.
+- Greek and English content works where supported.
+- Material visual changes have screenshots, recordings, or equivalent evidence.
+- Any deviation is approved and recorded in `docs/governance/EXCEPTIONS.md`.
+
 ## Quality
 
 - Formatting passes.
 - Linting passes.
 - Type checking passes where applicable.
 - Required tests pass.
+- Accessibility tests pass where applicable.
 - Build passes.
 - Required security and dependency scans pass.
 - Regression coverage exists for significant fixes where practical.

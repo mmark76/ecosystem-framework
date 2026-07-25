@@ -8,11 +8,13 @@
 - [ ] Requirements traceability is complete.
 - [ ] Architecture gate passes.
 - [ ] Security gate passes.
+- [ ] UI/UX and accessibility requirements pass where applicable.
+- [ ] Approved design tokens and app theme are implemented without unapproved deviations.
 - [ ] Quality gate passes.
 - [ ] Production readiness gate passes where applicable.
 - [ ] Required data and privacy controls pass.
 - [ ] Required documentation is complete.
-- [ ] Required evidence is present.
+- [ ] Required evidence, including material UI evidence, is present.
 - [ ] Open blockers equal zero.
 - [ ] Unaccepted critical risks equal zero.
 - [ ] Unapproved deviations equal zero.

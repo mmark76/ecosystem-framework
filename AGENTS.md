@@ -2,9 +2,9 @@
 
 ## 1. Mission
 
-Build the smallest secure, maintainable, testable, and extensible solution that fully satisfies the approved release scope.
+Build the smallest secure, maintainable, testable, extensible, and consistently usable solution that fully satisfies the approved release scope.
 
-Optimize for verified requirements, architectural health, security, clarity, and controlled completion—not theoretical perfection.
+Optimize for verified requirements, architectural health, security, accessibility, UI/UX coherence, clarity, and controlled completion—not theoretical perfection.
 
 ## 2. Required Reading Order
 
@@ -17,26 +17,29 @@ Before planning or changing code, read the relevant files:
 5. `docs/requirements/TRACEABILITY_MATRIX.md`
 6. `ARCHITECTURE_RULES.md`
 7. `SECURITY_RULES.md`
-8. `DEFINITION_OF_DONE.md`
-9. `COMPLETION_AND_STOP_PROTOCOL.md`
-10. `CHANGE_CONTROL.md`
+8. `UI_UX_RULES.md`
+9. `docs/design/UI_UX_DESIGN_SYSTEM.md` for user-facing work
+10. `DEFINITION_OF_DONE.md`
+11. `COMPLETION_AND_STOP_PROTOCOL.md`
+12. `CHANGE_CONTROL.md`
 
-Project-specific decisions may specialize these generic rules. They must not silently weaken mandatory security, evidence, or completion requirements.
+Project-specific decisions may specialize these generic rules. They must not silently weaken mandatory architecture, security, accessibility, UI/UX, evidence, or completion requirements.
 
 ## 3. Mandatory Task Protocol
 
 For every task:
 
 1. Identify the approved objective, requirement, defect, risk, or maintenance ID.
-2. Inspect the affected architecture, data flow, trust boundaries, and dependencies.
+2. Inspect the affected architecture, data flow, trust boundaries, dependencies, and user experience.
 3. Plan the smallest coherent change.
 4. Avoid unrelated refactors and speculative improvements.
 5. Implement within the correct module and layer.
-6. Add or update appropriate tests.
-7. Run the required checks.
-8. Update documentation and the traceability matrix.
-9. Record evidence, deviations, risks, and deferred ideas.
-10. Stop when the assigned acceptance criteria pass.
+6. Reuse approved design tokens and components for user-facing work.
+7. Add or update appropriate tests.
+8. Run the required checks.
+9. Update documentation and the traceability matrix.
+10. Record evidence, deviations, risks, and deferred ideas.
+11. Stop when the assigned acceptance criteria pass.
 
 Every code change must be traceable to an approved ID.
 
@@ -49,6 +52,7 @@ Do not introduce automatically:
 - premature generalization,
 - unrelated cleanup,
 - architecture rewrites,
+- unapproved visual redesigns,
 - future-proofing not justified by an approved requirement,
 - optional enhancements during completion work.
 
@@ -109,7 +113,25 @@ Do not stack conditions, overrides, or patches without addressing the underlying
 - Review dependencies and supply-chain risk.
 - Escalate if a critical control cannot be satisfied.
 
-## 8. Project Commands
+## 8. UI/UX and Accessibility Discipline
+
+For every user-facing change:
+
+- follow `UI_UX_RULES.md`,
+- use `design-system/tokens/tokens.json` or an approved generated adapter,
+- select one approved app theme,
+- reuse shared components before creating variants,
+- keep application and domain logic outside visual components,
+- define loading, empty, error, offline, and success states where applicable,
+- preserve responsive behavior across narrow, medium, and wide layouts,
+- verify keyboard, focus, contrast, text scaling, touch targets, and reduced motion,
+- support Greek and English content without layout assumptions,
+- record screenshots or equivalent evidence for material visual changes,
+- document every deviation in `docs/governance/EXCEPTIONS.md`.
+
+Accessibility failures and silent design-system deviations are defects.
+
+## 9. Project Commands
 
 Replace all placeholders during project initialization:
 
@@ -128,7 +150,7 @@ BUILD_COMMAND=<define>
 
 Never claim a command passed unless it was actually run successfully, or an approved exception explicitly records why it was not required.
 
-## 9. Repair Limits
+## 10. Repair Limits
 
 Default limits unless the project defines stricter ones:
 
@@ -138,7 +160,7 @@ Default limits unless the project defines stricter ones:
 
 When a limit is reached, stop and report `BLOCKED` or `NEEDS_DECISION`.
 
-## 10. Allowed Terminal States
+## 11. Allowed Terminal States
 
 - `COMPLETE`: assigned task criteria passed.
 - `BLOCKED`: required access, information, dependency, or capability is unavailable.
@@ -146,7 +168,7 @@ When a limit is reached, stop and report `BLOCKED` or `NEEDS_DECISION`.
 - `CHANGE_REQUEST`: completion requires changing the approved scope.
 - `RELEASE_COMPLETE`: the final release completion gate passed.
 
-## 11. Final Stop Rule
+## 12. Final Stop Rule
 
 Declare `RELEASE_COMPLETE` only when:
 
@@ -161,7 +183,7 @@ Declare `RELEASE_COMPLETE` only when:
 
 After declaring `RELEASE_COMPLETE`, stop modifying the repository. Do not perform additional cleanup, refactoring, optimization, feature work, or speculative improvement without a new approved task.
 
-## 12. Required Final Report
+## 13. Required Final Report
 
 Report:
 
@@ -170,6 +192,7 @@ Report:
 - tests and checks run,
 - security checks performed,
 - architecture impact,
+- UI/UX and accessibility impact,
 - evidence produced,
 - known limitations,
 - deferred items,
