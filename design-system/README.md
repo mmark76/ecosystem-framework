@@ -34,11 +34,18 @@ Web example:
 .primary-action {
   min-height: var(--touch-target-min);
   padding-inline: var(--space-4);
-  color: var(--app-on-accent);
+  color: var(--app-on-accent-strong);
   background: var(--app-accent-strong);
   border-radius: var(--radius-md);
 }
+
+.accent-label {
+  color: var(--app-on-accent);
+  background: var(--app-accent);
+}
 ```
+
+Use the matching foreground token for its background: `on-accent` with `accent`, and `on-accent-strong` with `accent-strong`.
 
 ## Platform Mapping
 
