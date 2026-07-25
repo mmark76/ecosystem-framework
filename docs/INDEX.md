@@ -9,6 +9,14 @@
 - `requirements/ACCEPTANCE_CRITERIA.md`
 - `requirements/TRACEABILITY_MATRIX.md`
 
+## Design and Experience
+- `design/UI_UX_DESIGN_SYSTEM.md`
+- `../UI_UX_RULES.md`
+- `../design-system/README.md`
+- `../design-system/tokens/tokens.json`
+- `../design-system/tokens/tokens.css`
+- `../checklists/UI_UX_REVIEW.md`
+
 ## Architecture
 - `architecture/SYSTEM_ARCHITECTURE.md`
 - `architecture/ARCHITECTURE_DECISIONS.md`
