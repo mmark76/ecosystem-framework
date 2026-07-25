@@ -6,6 +6,11 @@
 - [ ] Out-of-scope items are explicit.
 - [ ] Mandatory objectives have IDs.
 - [ ] Acceptance criteria are measurable.
+- [ ] Critical user journeys and required UI states are defined.
+- [ ] The approved app theme is selected.
+- [ ] Shared design tokens and component strategy are defined.
+- [ ] Responsive and platform-specific behavior is defined.
+- [ ] Accessibility and localization requirements are measurable.
 - [ ] Roles and ownership are assigned.
 - [ ] Data inventory and classification exist.
 - [ ] Criticality and risks are assessed.
@@ -14,6 +19,7 @@
 - [ ] Threat model exists.
 - [ ] Mandatory security controls are selected.
 - [ ] Test strategy and project commands are defined.
+- [ ] UI/UX review and accessibility verification methods are defined.
 - [ ] Environments and operations concept are defined.
 - [ ] No unresolved blocker prevents safe development.
 
