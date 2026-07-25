@@ -74,7 +74,9 @@ Set one approved app theme at the application root:
 - `chess`
 - `engineering`
 
-The theme controls `app-accent`, `app-accent-strong`, `app-accent-soft`, and `app-on-accent`.
+The theme controls `app-accent`, `app-accent-strong`, `app-accent-soft`, `app-on-accent`, and `app-on-accent-strong`.
+
+Always pair `on-accent` with `accent`, and `on-accent-strong` with `accent-strong`. Do not assume that one foreground color is accessible on both backgrounds.
 
 Do not introduce a new theme without:
 
