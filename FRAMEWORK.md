@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This framework defines how a software project is conceived, scoped, designed, architected, secured, developed, tested, deployed, operated, completed, evolved, and retired.
+This framework defines how a software project is conceived, scoped, experience-designed, architected, secured, developed, tested, deployed, operated, completed, evolved, and retired.
 
 ## Lifecycle
 
@@ -11,6 +11,7 @@ Idea
 → Feasibility
 → Product Definition
 → Requirements
+→ Experience Design and Accessibility
 → Scope Freeze
 → Risk and Criticality
 → Architecture
@@ -29,16 +30,31 @@ Idea
 
 1. Product and Scope
 2. Requirements and Traceability
-3. Architecture and Codebase Health
-4. Security Assurance
-5. Data and Privacy
-6. Frontend Engineering
-7. Backend and API Engineering
-8. Testing and Quality
-9. Infrastructure, Deployment, and Operations
-10. Governance and Change Control
-11. Completion and Stop Protocol
-12. Future Evolution and Retirement
+3. Experience Design, Design System, and Accessibility
+4. Architecture and Codebase Health
+5. Security Assurance
+6. Data and Privacy
+7. Frontend Engineering
+8. Backend and API Engineering
+9. Testing and Quality
+10. Infrastructure, Deployment, and Operations
+11. Governance and Change Control
+12. Completion and Stop Protocol
+13. Future Evolution and Retirement
+
+## Experience Design Rule
+
+Every user-facing project must:
+
+- identify its users, key journeys, and critical tasks,
+- select one approved Markellos app theme,
+- use the shared design tokens and component contracts,
+- define responsive and platform-specific behavior,
+- define loading, empty, error, offline, and success states,
+- define measurable accessibility criteria,
+- record evidence for material UI changes.
+
+Visual implementation is part of the controlled product design, not an independent styling phase.
 
 ## Release Philosophy
 
@@ -55,7 +71,8 @@ Completion does not mean every possible feature exists, the system can never be 
 ```text
 Objective
 → Requirement
-→ Design Decision
+→ Experience and Design Decision
+→ Architecture Decision
 → Implementation
 → Verification
 → Evidence
@@ -67,15 +84,15 @@ Code alone is not proof of completion.
 ## Roles
 
 ### Human Owner
-Approves scope, priorities, risk acceptance, major decisions, and release completion.
+Approves scope, priorities, risk acceptance, major product and design decisions, and release completion.
 
 ### Planning Agent
-Clarifies objectives, requirements, edge cases, and acceptance criteria.
+Clarifies objectives, requirements, users, journeys, edge cases, accessibility needs, and acceptance criteria.
 
 ### Builder Agent
-Implements approved work and produces technical evidence.
+Implements approved work using the required architecture, security controls, design system, and verification practices.
 
 ### Verifier Agent
-Checks traceability, architecture, security, tests, evidence, and completion.
+Checks traceability, architecture, security, UI/UX consistency, accessibility, tests, evidence, and completion.
 
 Independent verification is preferred when practical.
