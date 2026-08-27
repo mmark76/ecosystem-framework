@@ -1,6 +1,6 @@
 # Markellos Ecosystem UI/UX Design System
 
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** Baseline standard for all new and existing apps  
 **Applies to:** Web, mobile, tablet, desktop, installable web apps, and hybrid applications
 
@@ -142,15 +142,15 @@ Use `Noto Sans` or another approved font with strong Greek support where the pri
 
 ### 5.1 Type scale
 
-| Role | Size | Weight | Line height |
-|---|---:|---:|---:|
-| Display | 36 px | 700 | 1.2 |
-| Page title | 30 px | 700 | 1.2 |
-| Section title | 24 px | 600–700 | 1.2 |
-| Card title | 18–20 px | 600 | 1.3 |
-| Body | 16 px | 400 | 1.5 |
-| Supporting text | 14 px | 400 | 1.5 |
-| Label/caption | 12–14 px | 500–600 | 1.4 |
+| Role | Size | Weight token | Line-height token |
+|---|---:|---|---|
+| Display | 36 px | `font.weight.bold` (700) | `font.line-height.tight` (1.2) |
+| Page title | 30 px | `font.weight.bold` (700) | `font.line-height.tight` (1.2) |
+| Section title | 24 px | `font.weight.semibold` or `font.weight.bold` (600–700) | `font.line-height.tight` (1.2) |
+| Card title | 18–20 px | `font.weight.semibold` (600) | `font.line-height.compact` (1.3) |
+| Body | 16 px | `font.weight.regular` (400) | `font.line-height.normal` (1.5) |
+| Supporting text | 14 px | `font.weight.regular` (400) | `font.line-height.normal` (1.5) |
+| Label/caption | 12–14 px | `font.weight.medium` or `font.weight.semibold` (500–600) | `font.line-height.snug` (1.4) |
 
 Rules:
 

@@ -58,6 +58,10 @@ Use the matching foreground token for its background: `on-accent` with `accent`,
 
 Generated adapters must preserve token names and meaning. They must not become independent sources of truth.
 
+The maintained web adapter exposes the typography source keys as
+`--font-weight-*` and `--line-height-*` variables. Component styles must use
+those variables rather than repeating numeric font weights or line heights.
+
 ## Governance
 
 - Changes to shared tokens require design review and contrast validation.
