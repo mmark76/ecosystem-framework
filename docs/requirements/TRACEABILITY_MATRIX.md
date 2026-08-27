@@ -9,6 +9,12 @@
 | FWK-003 | SCOPE-FWK-003 | Semantic Versioning; no new ADR required | `FRAMEWORK_VERSION`; `CHANGELOG.md`; `UPGRADE_GUIDE.md` | TEST-FWK-003 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 | FWK-004 | SCOPE-FWK-004 | Existing documentation model; no new ADR required | Project template documents containing instructional ID rows | TEST-FWK-004 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 
+## Production Deployment Traceability
+
+| Requirement ID | Scope ID | Design / ADR | Implementation | Test IDs | Evidence | Owner | Status |
+|---|---|---|---|---|---|---|---|
+| OPS-001 | SCOPE-OPS-001 | `DEPLOYMENT.md`; `docs/DEPLOYMENT_CLOUDFLARE.md`; no new ADR required | Cloudflare Pages project `template-markellosecosystem`; custom domain `template.markellosecosystem.com` | TEST-OPS-001 | `evidence/cloudflare-pages-deployment.md` | mmark76 | VERIFIED |
+
 ## Project Traceability Template
 
 > **Initialization instruction:** Replace or remove this `EXAMPLE-*` row before

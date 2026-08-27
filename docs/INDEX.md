@@ -42,6 +42,7 @@
 
 ## Operations
 - `operations/OPERATIONS_AND_RECOVERY.md`
+- `DEPLOYMENT_CLOUDFLARE.md`
 
 ## Governance
 - `governance/RISK_REGISTER.md`

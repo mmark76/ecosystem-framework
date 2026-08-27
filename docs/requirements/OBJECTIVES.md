@@ -21,6 +21,18 @@ Approval source: repository-owner remediation request dated 2026-08-27.
 | FWK-003 | OBJ-FWK-001 | The framework must have one repository-level semantic version source, a changelog, and backward-compatible upgrade guidance. | High | Yes | mmark76 | AC-FWK-003 | VERIFIED |
 | FWK-004 | OBJ-FWK-001 | Instructional identifiers must be explicitly marked as examples and must not appear to be approved project records. | High | Yes | mmark76 | AC-FWK-004 | VERIFIED |
 
+## Approved Production Operations Objective
+
+| ID | Objective | Type | Priority | Mandatory | Owner | Verification | Status |
+|---|---|---|---|---|---|---|---|
+| OBJ-OPS-001 | Make the reference dashboard publicly available through a secure, reproducible Cloudflare Pages deployment. | Operations | High | Yes | mmark76 | AC-OPS-001 | VERIFIED |
+
+## Production Operations Requirement
+
+| ID | Objective ID | Requirement | Priority | Mandatory | Owner | Verification | Status |
+|---|---|---|---|---|---|---|---|
+| OPS-001 | OBJ-OPS-001 | The repository-root static site must be deployed without a build or backend, remain available at the Pages hostname and `template.markellosecosystem.com` over HTTPS, serve all dashboard assets, and have documented deployment, verification, and recovery steps. | High | Yes | mmark76 | AC-OPS-001 | VERIFIED |
+
 ## Project Objectives Template
 
 > **Initialization instruction:** Replace or remove all `EXAMPLE-*` rows before
