@@ -8,7 +8,7 @@
 
 | ID | Objective | Type | Priority | Mandatory | Owner | Verification | Status |
 |---|---|---|---|---|---|---|---|
-| OBJ-FWK-001 | Remediate the highest-priority framework audit findings while preserving the template architecture and dashboard standard. | Framework maintenance | Critical | Yes | Repository owner | AC-FWK-001 through AC-FWK-004 | IN_PROGRESS |
+| OBJ-FWK-001 | Remediate the highest-priority framework audit findings while preserving the template architecture and dashboard standard. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-001 through AC-FWK-004 | VERIFIED |
 
 Approval source: repository-owner remediation request dated 2026-08-27.
 
@@ -16,10 +16,10 @@ Approval source: repository-owner remediation request dated 2026-08-27.
 
 | ID | Objective ID | Requirement | Priority | Mandatory | Owner | Verification | Status |
 |---|---|---|---|---|---|---|---|
-| FWK-001 | OBJ-FWK-001 | The UI/UX design-system integration must be traceable, prescribe only available line-height tokens, and expose every JSON font-weight token through the CSS adapter. | Critical | Yes | Repository owner | AC-FWK-001 | IN_PROGRESS |
-| FWK-002 | OBJ-FWK-001 | A project initialization gate must verify identity, ownership, criticality/profile, scope, theme applicability, safe template replacement, real project commands, environment/secrets policy, and project documentation before development readiness. | Critical | Yes | Repository owner | AC-FWK-002 | IN_PROGRESS |
-| FWK-003 | OBJ-FWK-001 | The framework must have one repository-level semantic version source, a changelog, and backward-compatible upgrade guidance. | High | Yes | Repository owner | AC-FWK-003 | IN_PROGRESS |
-| FWK-004 | OBJ-FWK-001 | Instructional identifiers must be explicitly marked as examples and must not appear to be approved project records. | High | Yes | Repository owner | AC-FWK-004 | IN_PROGRESS |
+| FWK-001 | OBJ-FWK-001 | The UI/UX design-system integration must be traceable, prescribe only available line-height tokens, and expose every JSON font-weight token through the CSS adapter. | Critical | Yes | mmark76 | AC-FWK-001 | VERIFIED |
+| FWK-002 | OBJ-FWK-001 | A project initialization gate must verify identity, ownership, criticality/profile, scope, theme applicability, safe template replacement, real project commands, environment/secrets policy, and project documentation before development readiness. | Critical | Yes | mmark76 | AC-FWK-002 | VERIFIED |
+| FWK-003 | OBJ-FWK-001 | The framework must have one repository-level semantic version source, a changelog, and backward-compatible upgrade guidance. | High | Yes | mmark76 | AC-FWK-003 | VERIFIED |
+| FWK-004 | OBJ-FWK-001 | Instructional identifiers must be explicitly marked as examples and must not appear to be approved project records. | High | Yes | mmark76 | AC-FWK-004 | VERIFIED |
 
 ## Project Objectives Template
 

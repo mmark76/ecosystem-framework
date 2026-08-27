@@ -8,10 +8,10 @@ the template.
 
 | ID | Deliverable | Classification | Owner | Notes |
 |---|---|---|---|---|
-| SCOPE-FWK-001 | Resolve the open UI/UX design-system integration findings from PR #2. | Mandatory | Repository owner | Covers traceability, line-height tokens, and the web font-weight adapter. |
-| SCOPE-FWK-002 | Add and integrate a project initialization gate. | Mandatory | Repository owner | Applies before development readiness in newly created projects. |
-| SCOPE-FWK-003 | Establish simple semantic framework versioning and upgrade guidance. | Mandatory | Repository owner | Repository-level framework version only; no release automation. |
-| SCOPE-FWK-004 | Make instructional identifier rows unmistakably non-project data. | Mandatory | Repository owner | Preserve the documentation model while preventing false approvals. |
+| SCOPE-FWK-001 | Resolve the open UI/UX design-system integration findings from PR #2. | Mandatory | mmark76 | Covers traceability, line-height tokens, and the web font-weight adapter. |
+| SCOPE-FWK-002 | Add and integrate a project initialization gate. | Mandatory | mmark76 | Applies before development readiness in newly created projects. |
+| SCOPE-FWK-003 | Establish simple semantic framework versioning and upgrade guidance. | Mandatory | mmark76 | Repository-level framework version only; no release automation. |
+| SCOPE-FWK-004 | Make instructional identifier rows unmistakably non-project data. | Mandatory | mmark76 | Preserve the documentation model while preventing false approvals. |
 
 Approval source: repository-owner remediation request dated 2026-08-27.
 

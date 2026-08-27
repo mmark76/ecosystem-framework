@@ -14,7 +14,7 @@ written reason and owner. Any unresolved mandatory item results in `REWORK` or
 
 - [ ] `docs/product/PROJECT_BRIEF.md` defines the project name, purpose, users, value, and current project version.
 - [ ] Product, technical, security, operations, data/privacy, and release-scope owners are named, with any non-applicable role justified.
-- [ ] The selected framework profile, project criticality, safety impact, data sensitivity, outage tolerance, and data-loss tolerance are recorded.
+- [ ] Project criticality, safety impact, data sensitivity, outage tolerance, and data-loss tolerance are recorded; any applicable framework profile is selected, or its non-applicability is justified.
 
 ## Scope, Requirements, and Experience
 
