@@ -5,7 +5,7 @@ version of this template without overwriting project-specific decisions.
 
 ## Version Sources
 
-- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 1.0.0.
+- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 1.1.0.
 - `CHANGELOG.md` describes framework changes by semantic version.
 - Project/application versions remain project-owned and must continue to drive the visible version/build identity required by `PROJECT_DASHBOARD_GUIDE.md`.
 - Component versions, including the design-system token version, are independent and are updated according to their own compatibility rules.
@@ -33,6 +33,16 @@ unknown prior version as a known release.
 
 Skipping versions is allowed only when all intervening changelog entries and
 upgrade instructions are reviewed and satisfied.
+
+## Adopting the 1.1.0 Codex Rules Baseline
+
+1. Treat `GLOBAL_CODEX_RULES.md` from `mmark76/template-repo` as the canonical shared source.
+2. Determine the effective root Codex instruction file: use a non-empty root `AGENTS.override.md` when present; otherwise use root `AGENTS.md`.
+3. Preview synchronization with `scripts/sync_global_codex_rules.py` and review the complete diff before using `--write`.
+4. Preserve project-specific content outside the managed markers and keep it after the shared block so it can specialize the defaults.
+5. Verify markers, global rules version, retained project content, and final diff on a dedicated branch before opening a pull request.
+
+This addition does not authorize replacing project-specific instructions, creating a competing root override, force-pushing, or merging automatically.
 
 ## Adopting the 1.0.0 Baseline
 

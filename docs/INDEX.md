@@ -46,6 +46,9 @@
 ## Governance
 - `governance/RISK_REGISTER.md`
 - `governance/EXCEPTIONS.md`
+- `governance/GLOBAL_CODEX_RULES_SYNC.md`
+- `../GLOBAL_CODEX_RULES.md`
+- `../scripts/sync_global_codex_rules.py`
 
 ## Completion
 - `completion/COMPLETION_REPORT.md`

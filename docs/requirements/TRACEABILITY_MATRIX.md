@@ -8,6 +8,7 @@
 | FWK-002 | SCOPE-FWK-002 | `FRAMEWORK.md`; no new ADR required | `checklists/INITIALIZATION_GATE.md`; workflow references | TEST-FWK-002 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 | FWK-003 | SCOPE-FWK-003 | Semantic Versioning; no new ADR required | `FRAMEWORK_VERSION`; `CHANGELOG.md`; `UPGRADE_GUIDE.md` | TEST-FWK-003 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 | FWK-004 | SCOPE-FWK-004 | Existing documentation model; no new ADR required | Project template documents containing instructional ID rows | TEST-FWK-004 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
+| FWK-005 | SCOPE-FWK-005 | Codex `AGENTS.md` discovery model; no new ADR required | `GLOBAL_CODEX_RULES.md`; `AGENTS.md`; `scripts/sync_global_codex_rules.py`; `docs/governance/GLOBAL_CODEX_RULES_SYNC.md` | TEST-FWK-005 | `evidence/global-codex-rules-1.0.0.md` | mmark76 | VERIFIED |
 
 ## Project Traceability Template
 
