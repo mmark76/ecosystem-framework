@@ -12,8 +12,9 @@ the template.
 | SCOPE-FWK-002 | Add and integrate a project initialization gate. | Mandatory | mmark76 | Applies before development readiness in newly created projects. |
 | SCOPE-FWK-003 | Establish simple semantic framework versioning and upgrade guidance. | Mandatory | mmark76 | Repository-level framework version only; no release automation. |
 | SCOPE-FWK-004 | Make instructional identifier rows unmistakably non-project data. | Mandatory | mmark76 | Preserve the documentation model while preventing false approvals. |
+| SCOPE-FWK-005 | Establish canonical, portable global Codex working rules with safe synchronization guidance. | Mandatory | mmark76 | Global rules version 1.0.0; repository-specific instructions remain authoritative. |
 
-Approval source: repository-owner remediation request dated 2026-08-27.
+Approval sources: repository-owner remediation requests dated 2026-08-27.
 
 ## Approved Production Deployment Scope
 

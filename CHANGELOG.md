@@ -9,6 +9,18 @@ backward-compatible fixes.
 version. Project/application versions and component versions, such as the design
 system token version, are independent.
 
+## [1.1.0] - 2026-08-27
+
+### Added
+
+- Canonical shared Codex working rules in `GLOBAL_CODEX_RULES.md`, version 1.0.0.
+- A marked portable copy in the effective root `AGENTS.md` for local and cloud Codex runs.
+- Dry-run-first, dependency-free synchronization helper and rollout documentation that preserve repository-specific instructions.
+
+### Changed
+
+- Framework traceability and documentation navigation now cover the portable Codex-rules capability.
+
 ## [1.0.0] - 2026-08-27
 
 ### Added

@@ -1,6 +1,6 @@
 # AI-Guided Secure, Healthy & Consistent App Framework
 
-**Τρέχουσα έκδοση framework:** 1.0.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
+**Τρέχουσα έκδοση framework:** 1.1.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
 
 Γενικό, επαναχρησιμοποιήσιμο repository template για τον σχεδιασμό, την ασφαλή ανάπτυξη, την αρχιτεκτονική υγεία, την ενιαία εμπειρία UI/UX και την ελεγχόμενη ολοκλήρωση οποιουδήποτε μελλοντικού app.
 
@@ -35,7 +35,7 @@
 2. Συμπλήρωσε και πέρασε το `checklists/INITIALIZATION_GATE.md`· κανένα `EXAMPLE-*` row ή placeholder command δεν αποτελεί πραγματικό project data.
 3. Συμπλήρωσε τα αρχεία στα `docs/product/` και `docs/requirements/`.
 4. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md`, `docs/design/UI_UX_DESIGN_SYSTEM.md` και, για dashboard/landing/main interfaces, το `PROJECT_DASHBOARD_GUIDE.md`.
-5. Προσαρμόσε το `AGENTS.md` και τις πραγματικές εντολές ελέγχου.
+5. Διατήρησε το managed shared block του `AGENTS.md` και πρόσθεσε τις project-specific οδηγίες μετά από αυτό.
 6. Κατάγραψε αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
 7. Καθόρισε user flows, required UI states και accessibility criteria.
 8. Πάγωσε το release scope.
@@ -50,6 +50,9 @@
 | Αρχείο | Σκοπός |
 |---|---|
 | `AGENTS.md` | Κεντρικές υποχρεωτικές οδηγίες προς AI agents |
+| `GLOBAL_CODEX_RULES.md` | Canonical κοινές οδηγίες Codex, ανεξάρτητες από συγκεκριμένο project |
+| `scripts/sync_global_codex_rules.py` | Dry-run-first συγχρονισμός μόνο του managed shared block |
+| `docs/governance/GLOBAL_CODEX_RULES_SYNC.md` | Ασφαλής διαδικασία διάδοσης των κοινών κανόνων |
 | `FRAMEWORK.md` | Κύκλος ζωής και συνολικό μοντέλο |
 | `FRAMEWORK_VERSION` | Μοναδική πηγή αλήθειας για την έκδοση του framework |
 | `CHANGELOG.md` | Ιστορικό εκδόσεων του framework |

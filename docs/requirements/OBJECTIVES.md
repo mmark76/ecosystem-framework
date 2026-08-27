@@ -9,8 +9,9 @@
 | ID | Objective | Type | Priority | Mandatory | Owner | Verification | Status |
 |---|---|---|---|---|---|---|---|
 | OBJ-FWK-001 | Remediate the highest-priority framework audit findings while preserving the template architecture and dashboard standard. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-001 through AC-FWK-004 | VERIFIED |
+| OBJ-FWK-002 | Establish one canonical and portable baseline of global Codex working rules without weakening repository-specific authority. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-005 | VERIFIED |
 
-Approval source: repository-owner remediation request dated 2026-08-27.
+Approval sources: repository-owner remediation requests dated 2026-08-27.
 
 ## Framework Maintenance Requirements
 
@@ -20,6 +21,7 @@ Approval source: repository-owner remediation request dated 2026-08-27.
 | FWK-002 | OBJ-FWK-001 | A project initialization gate must verify identity, ownership, criticality/profile, scope, theme applicability, safe template replacement, real project commands, environment/secrets policy, and project documentation before development readiness. | Critical | Yes | mmark76 | AC-FWK-002 | VERIFIED |
 | FWK-003 | OBJ-FWK-001 | The framework must have one repository-level semantic version source, a changelog, and backward-compatible upgrade guidance. | High | Yes | mmark76 | AC-FWK-003 | VERIFIED |
 | FWK-004 | OBJ-FWK-001 | Instructional identifiers must be explicitly marked as examples and must not appear to be approved project records. | High | Yes | mmark76 | AC-FWK-004 | VERIFIED |
+| FWK-005 | OBJ-FWK-002 | `GLOBAL_CODEX_RULES.md` must be the versioned canonical source; the root effective Codex instruction file must contain its marked portable block before preserved project rules; and a dry-run-first dependency-free helper must update only that block while respecting root override discovery. | Critical | Yes | mmark76 | AC-FWK-005 | VERIFIED |
 
 ## Approved Production Operations Objective
 
