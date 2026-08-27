@@ -23,6 +23,12 @@
 
 > Πληρότητα χωρίς τελειομανία, ποιότητα χωρίς ατέρμονη ανάπτυξη και σαφές τέλος χωρίς αποκλεισμό της μελλοντικής εξέλιξης.
 
+## Dashboard reference template
+
+Το repository περιλαμβάνει ένα απλό, deployable reference dashboard στο root (`index.html`, `dashboard.css`, `dashboard.js`). Προορίζεται ως οπτικό και τεχνικό baseline για το `template.markellosecosystem.com` και ακολουθεί το `PROJECT_DASHBOARD_GUIDE.md`.
+
+Περισσότερα: `TEMPLATE_SITE.md`.
+
 ## Γρήγορη εκκίνηση νέου project
 
 1. Αντέγραψε το repository ως template.
@@ -52,6 +58,7 @@
 | `SECURITY_RULES.md` | Βασικές απαιτήσεις ασφάλειας |
 | `UI_UX_RULES.md` | Υποχρεωτικοί κανόνες ενιαίου UI/UX και accessibility |
 | `PROJECT_DASHBOARD_GUIDE.md` | Κοινό πρότυπο για dashboard, Header, Footer, navigation και version/build identity |
+| `TEMPLATE_SITE.md` | Οδηγίες για το deployable reference dashboard |
 | `docs/design/UI_UX_DESIGN_SYSTEM.md` | Αναλυτικός οδηγός design system για όλες τις πλατφόρμες |
 | `design-system/tokens/` | Κοινά platform-neutral και web design tokens |
 | `DEFINITION_OF_DONE.md` | Πότε μία εργασία θεωρείται ολοκληρωμένη |
