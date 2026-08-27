@@ -15,9 +15,12 @@
 
 ## Required Controls
 
+> **Initialization instruction:** Replace or remove every `EXAMPLE-*` row. It is
+> not an approved control and cannot satisfy a security requirement.
+
 | Control ID | Control | Requirement ID | Owner | Verification | Evidence | Status |
 |---|---|---|---|---|---|---|
-| SEC-001 |  |  |  |  |  | DRAFT |
+| EXAMPLE-SEC-001 | Replace with a real control or remove this row. | Replace with an approved requirement ID. | Unassigned | Define verification. | Define evidence. | NOT PROJECT DATA |
 
 ## Areas to Address
 - Identity and access
