@@ -12,6 +12,8 @@ List objective, requirement, defect, risk, or maintenance IDs.
 ## UI/UX and accessibility impact
 - App theme:
 - Shared components or tokens used:
+- Dashboard guide applicable: Yes / No
+- Header/Footer or main-shell impact:
 - Responsive behavior:
 - Accessibility behavior:
 - Localization impact:
@@ -29,6 +31,9 @@ List objective, requirement, defect, risk, or maintenance IDs.
 
 ### UI checklist when applicable
 - [ ] Approved theme and semantic tokens used
+- [ ] `PROJECT_DASHBOARD_GUIDE.md` followed for dashboard/landing/main-shell work
+- [ ] Project identity, Header, navigation and ecosystem return path checked where applicable
+- [ ] Footer copyright and version/build identification checked where applicable
 - [ ] Narrow, medium, and wide layouts checked
 - [ ] Keyboard and visible focus checked
 - [ ] Contrast and touch targets checked
