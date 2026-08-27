@@ -1,5 +1,13 @@
 # Documentation Index
 
+## Initialization
+- `../checklists/INITIALIZATION_GATE.md`
+
+## Framework Versioning
+- `../FRAMEWORK_VERSION`
+- `../CHANGELOG.md`
+- `../UPGRADE_GUIDE.md`
+
 ## Product
 - `product/PROJECT_BRIEF.md`
 - `product/RELEASE_SCOPE.md`

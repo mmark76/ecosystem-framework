@@ -2,9 +2,13 @@
 
 Create one entry per significant decision.
 
+> **Initialization instruction:** Copy the structure below, replace the
+> `EXAMPLE-*` identifier and every prompt, and then remove the example. The
+> example is not an accepted architecture decision.
+
 ## ADR Template
 
-### ADR-000 — Decision Title
+### EXAMPLE-ADR-000 — Replace with a Real Decision Title
 
 - Status: Proposed / Accepted / Superseded / Rejected
 - Date:

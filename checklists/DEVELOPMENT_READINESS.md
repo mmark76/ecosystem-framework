@@ -1,5 +1,6 @@
 # Development Readiness Gate
 
+- [ ] `checklists/INITIALIZATION_GATE.md` has a recorded `PASS`; unresolved initialization items block this gate.
 - [ ] Problem and users are defined.
 - [ ] Product value and success measures are defined.
 - [ ] Release scope is finite and approved.
