@@ -78,6 +78,14 @@ Completion means:
 
 Completion does not mean every possible feature exists, the system can never be improved, or no future maintenance will be needed.
 
+## Framework Versioning
+
+`FRAMEWORK_VERSION` is the repository-level source of truth and uses semantic
+versioning. Record notable changes in `CHANGELOG.md` and use `UPGRADE_GUIDE.md`
+when adopting a newer framework version into an existing project. This version
+does not replace the project/application version or the visible build identity
+required by `PROJECT_DASHBOARD_GUIDE.md`.
+
 ## Evidence Chain
 
 ```text

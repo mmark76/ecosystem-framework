@@ -1,5 +1,7 @@
 # AI-Guided Secure, Healthy & Consistent App Framework
 
+**Τρέχουσα έκδοση framework:** 1.0.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
+
 Γενικό, επαναχρησιμοποιήσιμο repository template για τον σχεδιασμό, την ασφαλή ανάπτυξη, την αρχιτεκτονική υγεία, την ενιαία εμπειρία UI/UX και την ελεγχόμενη ολοκλήρωση οποιουδήποτε μελλοντικού app.
 
 ## Κεντρικός στόχος
@@ -43,6 +45,9 @@
 |---|---|
 | `AGENTS.md` | Κεντρικές υποχρεωτικές οδηγίες προς AI agents |
 | `FRAMEWORK.md` | Κύκλος ζωής και συνολικό μοντέλο |
+| `FRAMEWORK_VERSION` | Μοναδική πηγή αλήθειας για την έκδοση του framework |
+| `CHANGELOG.md` | Ιστορικό εκδόσεων του framework |
+| `UPGRADE_GUIDE.md` | Ασφαλής υιοθέτηση νεότερων template changes από υπάρχοντα repositories |
 | `ARCHITECTURE_RULES.md` | Κανόνες υγιούς και δυναμικής αρχιτεκτονικής |
 | `SECURITY_RULES.md` | Βασικές απαιτήσεις ασφάλειας |
 | `UI_UX_RULES.md` | Υποχρεωτικοί κανόνες ενιαίου UI/UX και accessibility |
