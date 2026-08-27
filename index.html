@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="tech-toolbox">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reference dashboard template for the Markellos ecosystem.">
+  <meta name="theme-color" content="#153b6b">
+  <meta name="build-version" content="1.0.0">
+  <meta name="build-date" content="">
+  <meta name="build-commit" content="">
+  <title>Project Dashboard Template</title>
+  <link rel="stylesheet" href="./design-system/tokens/tokens.css">
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="identity-row">
+        <a class="brand-lockup" href="#home" aria-label="Project dashboard home">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span class="brand-copy">
+            <span class="project-label">PROJECT TEMPLATE</span>
+            <span class="project-name">Project Dashboard</span>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <button class="utility-button" type="button" aria-label="Language">EN</button>
+          <a class="ecosystem-link" href="https://markellosecosystem.com/">Back to markellosecosystem</a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+        </div>
+      </div>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link is-active" href="#home">Home</a>
+        <a class="nav-link" href="#overview">Overview</a>
+        <a class="nav-link" href="#documents">Documents</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="main-content">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">REFERENCE DASHBOARD</p>
+      <h1 id="page-title">A simple starting point for every project.</h1>
+      <p class="hero-copy">
+        Clear identity, limited navigation, useful cards, visible project status and a stable footer.
+        Replace the sample content with project-specific information without changing the basic structure.
+      </p>
+    </section>
+
+    <section id="overview" class="card-grid" aria-label="Project overview">
+      <article class="dashboard-card">
+        <p class="card-label">PROJECT</p>
+        <h2>Overview</h2>
+        <p>Briefly explain what the project is, what it delivers and who it serves.</p>
+        <a class="card-link" href="#status">View project status</a>
+      </article>
+
+      <article class="dashboard-card">
+        <p class="card-label">WORK</p>
+        <h2>Main area</h2>
+        <p>Use this card for the primary workflow, tool, dataset or project section.</p>
+        <a class="card-link" href="#">Open main area</a>
+      </article>
+
+      <article id="documents" class="dashboard-card">
+        <p class="card-label">DOCUMENTS</p>
+        <h2>Documentation</h2>
+        <p>Provide direct access to the few documents or resources users need most often.</p>
+        <a class="card-link" href="./PROJECT_DASHBOARD_GUIDE.md">Open dashboard guide</a>
+      </article>
+
+      <article class="dashboard-card">
+        <p class="card-label">SOURCE</p>
+        <h2>Repository</h2>
+        <p>Keep the implementation and project history easy to identify and inspect.</p>
+        <a class="card-link" href="https://github.com/mmark76/template-repo">Open GitHub repository</a>
+      </article>
+    </section>
+
+    <section id="status" class="status-panel" aria-labelledby="status-title">
+      <div>
+        <p class="eyebrow">CURRENT STATUS</p>
+        <h2 id="status-title">Project status</h2>
+      </div>
+      <dl class="status-list">
+        <div>
+          <dt>Current phase</dt>
+          <dd>Template / Reference</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd><span class="status-dot" aria-hidden="true"></span> Ready</dd>
+        </div>
+        <div>
+          <dt>Next action</dt>
+          <dd>Adapt content to the project</dd>
+        </div>
+        <div>
+          <dt>Open items</dt>
+          <dd>None in the reference template</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="about" class="simple-section" aria-labelledby="about-title">
+      <p class="eyebrow">USAGE</p>
+      <h2 id="about-title">Keep the structure. Change the content.</h2>
+      <p>
+        The reference layout intentionally stays small: Header → Main Content → Footer. Add only the navigation,
+        cards and utilities that the project actually requires.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <span>© <span id="current-year">2026</span> Markellos Markides. All rights reserved.</span>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="./PROJECT_DASHBOARD_GUIDE.md">Documentation</a>
+          <a href="https://github.com/mmark76/template-repo">GitHub</a>
+          <span>Copyright protected</span>
+        </nav>
+      </div>
+      <div class="build-id" id="build-id" aria-label="Version information">v1.0.0_TEMPLATE</div>
+    </div>
+  </footer>
+
+  <script src="./dashboard.js"></script>
+</body>
+</html>
