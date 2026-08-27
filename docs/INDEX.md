@@ -1,5 +1,8 @@
 # Documentation Index
 
+## Initialization
+- `../checklists/INITIALIZATION_GATE.md`
+
 ## Product
 - `product/PROJECT_BRIEF.md`
 - `product/RELEASE_SCOPE.md`

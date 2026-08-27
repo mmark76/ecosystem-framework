@@ -12,17 +12,18 @@ Before planning or changing code, read the relevant files:
 
 1. `docs/product/PROJECT_BRIEF.md`
 2. `docs/product/RELEASE_SCOPE.md`
-3. `docs/requirements/OBJECTIVES.md`
-4. `docs/requirements/ACCEPTANCE_CRITERIA.md`
-5. `docs/requirements/TRACEABILITY_MATRIX.md`
-6. `ARCHITECTURE_RULES.md`
-7. `SECURITY_RULES.md`
-8. `UI_UX_RULES.md`
-9. `docs/design/UI_UX_DESIGN_SYSTEM.md` for user-facing work
-10. `PROJECT_DASHBOARD_GUIDE.md` for dashboards, landing pages, project-status pages, and main web interfaces
-11. `DEFINITION_OF_DONE.md`
-12. `COMPLETION_AND_STOP_PROTOCOL.md`
-13. `CHANGE_CONTROL.md`
+3. `checklists/INITIALIZATION_GATE.md` during project initialization
+4. `docs/requirements/OBJECTIVES.md`
+5. `docs/requirements/ACCEPTANCE_CRITERIA.md`
+6. `docs/requirements/TRACEABILITY_MATRIX.md`
+7. `ARCHITECTURE_RULES.md`
+8. `SECURITY_RULES.md`
+9. `UI_UX_RULES.md`
+10. `docs/design/UI_UX_DESIGN_SYSTEM.md` for user-facing work
+11. `PROJECT_DASHBOARD_GUIDE.md` for dashboards, landing pages, project-status pages, and main web interfaces
+12. `DEFINITION_OF_DONE.md`
+13. `COMPLETION_AND_STOP_PROTOCOL.md`
+14. `CHANGE_CONTROL.md`
 
 Project-specific decisions may specialize these generic rules. They must not silently weaken mandatory architecture, security, accessibility, UI/UX, dashboard identity, evidence, or completion requirements.
 
@@ -30,17 +31,18 @@ Project-specific decisions may specialize these generic rules. They must not sil
 
 For every task:
 
-1. Identify the approved objective, requirement, defect, risk, or maintenance ID.
-2. Inspect the affected architecture, data flow, trust boundaries, dependencies, and user experience.
-3. Plan the smallest coherent change.
-4. Avoid unrelated refactors and speculative improvements.
-5. Implement within the correct module and layer.
-6. Reuse approved design tokens and components for user-facing work.
-7. Add or update appropriate tests.
-8. Run the required checks.
-9. Update documentation and the traceability matrix.
-10. Record evidence, deviations, risks, and deferred ideas.
-11. Stop when the assigned acceptance criteria pass.
+1. For a newly created project, pass `checklists/INITIALIZATION_GATE.md` before development readiness.
+2. Identify the approved objective, requirement, defect, risk, or maintenance ID.
+3. Inspect the affected architecture, data flow, trust boundaries, dependencies, and user experience.
+4. Plan the smallest coherent change.
+5. Avoid unrelated refactors and speculative improvements.
+6. Implement within the correct module and layer.
+7. Reuse approved design tokens and components for user-facing work.
+8. Add or update appropriate tests.
+9. Run the required checks.
+10. Update documentation and the traceability matrix.
+11. Record evidence, deviations, risks, and deferred ideas.
+12. Stop when the assigned acceptance criteria pass.
 
 Every code change must be traceable to an approved ID.
 
@@ -152,6 +154,10 @@ BUILD_COMMAND=<define>
 ```
 
 Never claim a command passed unless it was actually run successfully, or an approved exception explicitly records why it was not required.
+
+During project initialization, replace every command placeholder above with the
+actual project command or an explicit, owned non-applicability decision. The
+initialization gate blocks development readiness while placeholders remain.
 
 ## 10. Repair Limits
 

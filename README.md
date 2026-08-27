@@ -24,17 +24,18 @@
 ## Γρήγορη εκκίνηση νέου project
 
 1. Αντέγραψε το repository ως template.
-2. Συμπλήρωσε τα αρχεία στα `docs/product/` και `docs/requirements/`.
-3. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md`, `docs/design/UI_UX_DESIGN_SYSTEM.md` και, για dashboard/landing/main interfaces, το `PROJECT_DASHBOARD_GUIDE.md`.
-4. Προσαρμόσε το `AGENTS.md` και τις πραγματικές εντολές ελέγχου.
-5. Κατάγραψε αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
-6. Καθόρισε user flows, required UI states και accessibility criteria.
-7. Πάγωσε το release scope.
-8. Πέρασε το `checklists/DEVELOPMENT_READINESS.md`.
-9. Υλοποίησε μόνο εγκεκριμένα requirement IDs, χρησιμοποιώντας τα κοινά design tokens.
-10. Συγκέντρωσε evidence.
-11. Πέρασε το `checklists/FINAL_COMPLETION_GATE.md`.
-12. Δήλωσε ολοκλήρωση και σταμάτα.
+2. Συμπλήρωσε και πέρασε το `checklists/INITIALIZATION_GATE.md`· κανένα `EXAMPLE-*` row ή placeholder command δεν αποτελεί πραγματικό project data.
+3. Συμπλήρωσε τα αρχεία στα `docs/product/` και `docs/requirements/`.
+4. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md`, `docs/design/UI_UX_DESIGN_SYSTEM.md` και, για dashboard/landing/main interfaces, το `PROJECT_DASHBOARD_GUIDE.md`.
+5. Προσαρμόσε το `AGENTS.md` και τις πραγματικές εντολές ελέγχου.
+6. Κατάγραψε αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
+7. Καθόρισε user flows, required UI states και accessibility criteria.
+8. Πάγωσε το release scope.
+9. Πέρασε το `checklists/DEVELOPMENT_READINESS.md`.
+10. Υλοποίησε μόνο εγκεκριμένα requirement IDs, χρησιμοποιώντας τα κοινά design tokens.
+11. Συγκέντρωσε evidence.
+12. Πέρασε το `checklists/FINAL_COMPLETION_GATE.md`.
+13. Δήλωσε ολοκλήρωση και σταμάτα.
 
 ## Πλοήγηση
 
@@ -53,6 +54,7 @@
 | `CHANGE_CONTROL.md` | Πώς ελέγχονται αλλαγές του scope |
 | `FUTURE_BACKLOG.md` | Ιδέες που δεν ανήκουν στο τρέχον release |
 | `docs/INDEX.md` | Χάρτης όλων των εγγράφων |
+| `checklists/INITIALIZATION_GATE.md` | Υποχρεωτική μετατροπή του template σε πραγματικό project πριν από development readiness |
 | `checklists/` | Gates πριν από development, merge και release |
 
 ## Επιτρεπόμενη τελική δήλωση

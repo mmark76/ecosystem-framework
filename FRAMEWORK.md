@@ -8,6 +8,7 @@ This framework defines how a software project is conceived, scoped, experience-d
 
 ```text
 Idea
+→ Project Initialization
 → Feasibility
 → Product Definition
 → Requirements
@@ -25,6 +26,17 @@ Idea
 → Controlled Evolution
 → Retirement
 ```
+
+## Project Initialization
+
+Immediately after creating a repository from this template, complete
+`checklists/INITIALIZATION_GATE.md`. It converts instructional template content
+into project-specific authority and must pass before
+`checklists/DEVELOPMENT_READINESS.md` can pass.
+
+Unresolved identity, ownership, criticality/profile, scope, theme, example-row,
+project-command, environment/secrets, or required-documentation items block
+development readiness.
 
 ## Core Modules
 
