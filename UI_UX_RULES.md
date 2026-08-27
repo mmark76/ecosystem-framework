@@ -4,7 +4,7 @@
 
 These rules make every application in the Markellos ecosystem feel like part of one coherent product family across web, mobile, tablet, and desktop.
 
-The detailed specification is in `docs/design/UI_UX_DESIGN_SYSTEM.md`. Platform-neutral design tokens are in `design-system/tokens/`.
+The detailed specification is in `docs/design/UI_UX_DESIGN_SYSTEM.md`. Dashboard, landing-page, project-status, Header, Footer, and build-identity rules are in `PROJECT_DASHBOARD_GUIDE.md`. Platform-neutral design tokens are in `design-system/tokens/`.
 
 ## 2. Source of Truth
 
@@ -13,9 +13,10 @@ Use this precedence order:
 1. Approved product and accessibility requirements.
 2. `UI_UX_RULES.md`.
 3. `docs/design/UI_UX_DESIGN_SYSTEM.md`.
-4. `design-system/tokens/tokens.json`.
-5. Platform adapters generated from or mapped to those tokens.
-6. Feature-level styles.
+4. `PROJECT_DASHBOARD_GUIDE.md` for dashboards, landing pages, project-status pages, and main web interfaces.
+5. `design-system/tokens/tokens.json`.
+6. Platform adapters generated from or mapped to those tokens.
+7. Feature-level styles.
 
 Feature code must not redefine ecosystem-wide design decisions.
 
@@ -28,7 +29,8 @@ All apps share:
 - the same spacing, radius, elevation, icon, and motion logic,
 - the same component anatomy and interaction behavior,
 - the same accessibility baseline,
-- the same responsive layout principles.
+- the same responsive layout principles,
+- for applicable dashboards and main web interfaces, the same structural logic for project identity, Header, Footer, ecosystem return path, and visible version/build identification.
 
 Each app may vary only through:
 
@@ -52,17 +54,20 @@ The target balance is approximately 80% shared system and 20% app-specific expre
 - Destructive actions require clear wording and confirmation proportional to risk.
 - Do not use color as the only carrier of meaning.
 - Do not create dark patterns, deceptive urgency, hidden costs, or misleading controls.
+- Dashboards, landing pages, project-status pages, and main web interfaces must follow `PROJECT_DASHBOARD_GUIDE.md` unless a documented project-specific requirement justifies an approved deviation.
 
 ## 5. Layout and Navigation
 
 - Use a 4 px spacing grid.
 - Keep primary content within the approved content-width tokens.
-- Desktop applications normally use a left navigation rail or sidebar plus a top app bar.
-- Tablet layouts may collapse the sidebar into a compact rail or drawer.
+- General desktop applications may use a left navigation rail or sidebar plus a top app bar when task complexity warrants it.
+- Simple project dashboards, landing pages, status pages, and ecosystem-facing home screens should default to the simpler **Header → Main Content → Footer** structure defined in `PROJECT_DASHBOARD_GUIDE.md`.
+- Tablet layouts may collapse complex navigation into a compact rail or drawer.
 - Mobile layouts use a compact top bar and either bottom navigation for 3–5 primary destinations or a drawer for larger information architectures.
 - Preserve destination names and ordering across platforms.
 - Cards are for grouped, actionable, or independently scannable content—not for every paragraph.
 - Avoid deeply nested cards and excessive visual containers.
+- For applicable project dashboards, keep primary navigation concise and preserve the ecosystem return link, project identity, stable Footer, copyright information, and visible version/build identity.
 
 ## 6. Theming
 
@@ -138,14 +143,17 @@ For UI-impacting work, record:
 - affected requirement IDs,
 - theme used,
 - components and tokens used,
+- dashboard-guide compliance where applicable,
 - responsive widths tested,
 - keyboard and focus verification,
 - contrast and accessibility results,
 - screenshots or recordings for materially changed states,
 - known limitations and approved exceptions.
 
+For dashboard or main-shell changes, verification must also confirm Header structure, project identity, navigation simplicity, Footer content, ecosystem return path where applicable, and version/build identification.
+
 ## 12. Exception Rule
 
-Any deviation from this system must be explicit, justified, time-bounded where temporary, assigned to an owner, and recorded in `docs/governance/EXCEPTIONS.md`.
+Any deviation from this system or from `PROJECT_DASHBOARD_GUIDE.md` must be explicit, justified, time-bounded where temporary, assigned to an owner, and recorded in `docs/governance/EXCEPTIONS.md`.
 
-Silent UI/UX deviations are forbidden.
+Silent UI/UX or dashboard-identity deviations are forbidden.

@@ -10,6 +10,7 @@
 - να αποκτά τη μικρότερη επαρκή αρχιτεκτονική,
 - να αναπτύσσεται modular, ασφαλώς και ελέγξιμα,
 - να ακολουθεί ενιαίο, αναγνωρίσιμο και προσβάσιμο UI/UX σε όλες τις πλατφόρμες,
+- να χρησιμοποιεί συνεπή λογική dashboard, Header, Footer και version/build identification,
 - να μεγαλώνει καθαρά, οργανικά και προβλέψιμα,
 - να αποφεύγει αρχιτεκτονικό χάος, ασύνδετα visual styles, πρόχειρα fixes και άσκοπα rebuilds,
 - να αποδεικνύει την ολοκλήρωση με tests και evidence,
@@ -24,7 +25,7 @@
 
 1. Αντέγραψε το repository ως template.
 2. Συμπλήρωσε τα αρχεία στα `docs/product/` και `docs/requirements/`.
-3. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md` και `docs/design/UI_UX_DESIGN_SYSTEM.md`.
+3. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md`, `docs/design/UI_UX_DESIGN_SYSTEM.md` και, για dashboard/landing/main interfaces, το `PROJECT_DASHBOARD_GUIDE.md`.
 4. Προσαρμόσε το `AGENTS.md` και τις πραγματικές εντολές ελέγχου.
 5. Κατάγραψε αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
 6. Καθόρισε user flows, required UI states και accessibility criteria.
@@ -44,6 +45,7 @@
 | `ARCHITECTURE_RULES.md` | Κανόνες υγιούς και δυναμικής αρχιτεκτονικής |
 | `SECURITY_RULES.md` | Βασικές απαιτήσεις ασφάλειας |
 | `UI_UX_RULES.md` | Υποχρεωτικοί κανόνες ενιαίου UI/UX και accessibility |
+| `PROJECT_DASHBOARD_GUIDE.md` | Κοινό πρότυπο για dashboard, Header, Footer, navigation και version/build identity |
 | `docs/design/UI_UX_DESIGN_SYSTEM.md` | Αναλυτικός οδηγός design system για όλες τις πλατφόρμες |
 | `design-system/tokens/` | Κοινά platform-neutral και web design tokens |
 | `DEFINITION_OF_DONE.md` | Πότε μία εργασία θεωρείται ολοκληρωμένη |
