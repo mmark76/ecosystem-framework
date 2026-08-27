@@ -15,6 +15,14 @@ the template.
 
 Approval source: repository-owner remediation request dated 2026-08-27.
 
+## Approved Production Deployment Scope
+
+| ID | Deliverable | Classification | Owner | Notes |
+|---|---|---|---|---|
+| SCOPE-OPS-001 | Publish the reference dashboard through Cloudflare Pages at `template.markellosecosystem.com` and record a reproducible deployment and verification procedure. | Mandatory | mmark76 | Direct Upload of the repository-root static site; no build command, backend, or runtime service. |
+
+Approval source: repository-owner deployment request dated 2026-08-27.
+
 ## Project Release Template
 
 > **Initialization instruction:** Replace every `EXAMPLE-*` row and all blank

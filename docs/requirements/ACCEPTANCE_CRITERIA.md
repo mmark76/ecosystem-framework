@@ -11,6 +11,12 @@ Every mandatory objective must have objective, measurable, and testable criteria
 | AC-FWK-003 | FWK-003 | The template has no repository-level version source or upgrade history. | Framework version references and upgrade documents are inspected. | One SemVer value is the framework source of truth; README, changelog, and upgrade guidance agree with it; and the initial-version rationale and backward-compatible adoption process are documented. | Yes | TEST-FWK-003 | VERIFIED |
 | AC-FWK-004 | FWK-004 | Template documents contain blank rows with realistic identifiers. | Identifier-bearing instructional rows and their initialization instructions are inspected. | All shipped instructional rows use `EXAMPLE-*` identifiers, explicitly state that they are not project data, and direct adopters to replace or remove them before approval. | Yes | TEST-FWK-004 | VERIFIED |
 
+## Approved Production Deployment Criterion
+
+| Criterion ID | Requirement ID | Given / Preconditions | When / Action | Then / Expected Result | Blocking | Verification | Status |
+|---|---|---|---|---|---|---|---|
+| AC-OPS-001 | OPS-001 | The approved dashboard source is the repository-root static site at commit `b2b5ef9f09d3243956e31b019e388b1d4587a1dd`, and the `markellosecosystem.com` zone is managed in Cloudflare. | The source is deployed to the `template-markellosecosystem` Pages project and its custom domain is activated and checked. | Both HTTPS hostnames return the intended dashboard with successful asset responses; the custom domain is Active in Pages; public DNS resolves through Cloudflare; desktop and mobile navigation, the ecosystem return link, stable footer, and visible version are present; and deployment and recovery instructions are recorded without secrets. | Yes | TEST-OPS-001 | VERIFIED |
+
 ## Project Criteria Template
 
 > **Initialization instruction:** Replace or remove every `EXAMPLE-*` row. An
