@@ -29,6 +29,8 @@ A task is `COMPLETE` only when all applicable conditions below are satisfied.
 For every user-facing change:
 
 - `UI_UX_RULES.md` and the approved app theme are followed.
+- `PROJECT_DASHBOARD_GUIDE.md` is followed for dashboards, landing pages, project-status pages, and main web interfaces.
+- Applicable dashboard shells preserve the required project identity, simple navigation, ecosystem return path, Header/Footer logic, copyright information, and visible version/build identification.
 - Semantic design tokens are used; no arbitrary ecosystem-wide values were introduced.
 - Existing shared components are reused where appropriate.
 - Required loading, empty, error, offline, and success states are handled.
