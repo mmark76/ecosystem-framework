@@ -31,20 +31,46 @@ Project-specific decisions may specialize these generic rules. They must not sil
 
 For every task:
 
-1. For a newly created project, pass `checklists/INITIALIZATION_GATE.md` before development readiness.
-2. Identify the approved objective, requirement, defect, risk, or maintenance ID.
-3. Inspect the affected architecture, data flow, trust boundaries, dependencies, and user experience.
-4. Plan the smallest coherent change.
-5. Avoid unrelated refactors and speculative improvements.
-6. Implement within the correct module and layer.
-7. Reuse approved design tokens and components for user-facing work.
-8. Add or update appropriate tests.
-9. Run the required checks.
-10. Update documentation and the traceability matrix.
-11. Record evidence, deviations, risks, and deferred ideas.
-12. Stop when the assigned acceptance criteria pass.
+1. Perform the Git synchronization preflight below before modifying repository files.
+2. For a newly created project, pass `checklists/INITIALIZATION_GATE.md` before development readiness.
+3. Identify the approved objective, requirement, defect, risk, or maintenance ID.
+4. Inspect the affected architecture, data flow, trust boundaries, dependencies, and user experience.
+5. Plan the smallest coherent change.
+6. Avoid unrelated refactors and speculative improvements.
+7. Implement within the correct module and layer.
+8. Reuse approved design tokens and components for user-facing work.
+9. Add or update appropriate tests.
+10. Run the required checks.
+11. Update documentation and the traceability matrix.
+12. Record evidence, deviations, risks, and deferred ideas.
+13. Stop when the assigned acceptance criteria pass.
 
 Every code change must be traceable to an approved ID.
+
+### 3.1 Git Synchronization Preflight
+
+Before any repository modification, establish the actual local-versus-remote Git state. Never assume the local checkout is current.
+
+Required preflight:
+
+1. Run `git fetch origin` when the `origin` remote exists and is reachable. This must happen before deciding whether the local branch is current.
+2. Record the current branch and local `HEAD` SHA.
+3. Inspect the working tree, including modified, staged, and untracked files.
+4. Identify the relevant upstream or approved remote base branch and compare the local branch with it.
+5. Determine and report whether the local branch is synchronized, ahead, behind, or diverged before making changes.
+
+State handling:
+
+- **Clean and synchronized:** proceed normally.
+- **Clean but behind:** do not start work from the stale local tip. Prefer creating the task branch directly from the up-to-date approved remote base, such as `origin/main`, without rewriting or discarding local history.
+- **Ahead / unpushed commits:** preserve and report them. Do not silently ignore, overwrite, reset, or repurpose them as part of an unrelated task.
+- **Dirty working tree:** preserve all existing user work. Continue only when the task can be isolated safely without modifying or hiding those changes; otherwise stop and report the state.
+- **Diverged local and remote history:** stop and report the divergence before modifying files unless the task explicitly authorizes a reconciliation strategy.
+- **Missing or unreachable remote:** report that synchronization could not be verified. Do not claim the checkout is synchronized. Proceed only when the task can be performed safely from the known local state.
+
+By default, do not automatically run operations that can alter, conceal, or discard existing user work, including `pull`, non-fast-forward `merge`, `rebase`, `reset`, `stash`, checkout-based discard, force updates, or force pushes. Use such operations only when the repository workflow or the explicit task authorizes them and the effect on existing work is understood.
+
+The objective of this preflight is not to force every local branch to match the remote. The objective is to know the exact Git state, preserve user work, and start each task from an intentional and safe base.
 
 ## 4. Scope Discipline
 
