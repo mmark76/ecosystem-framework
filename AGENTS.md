@@ -19,11 +19,12 @@ Before planning or changing code, read the relevant files:
 7. `SECURITY_RULES.md`
 8. `UI_UX_RULES.md`
 9. `docs/design/UI_UX_DESIGN_SYSTEM.md` for user-facing work
-10. `DEFINITION_OF_DONE.md`
-11. `COMPLETION_AND_STOP_PROTOCOL.md`
-12. `CHANGE_CONTROL.md`
+10. `PROJECT_DASHBOARD_GUIDE.md` for dashboards, landing pages, project-status pages, and main web interfaces
+11. `DEFINITION_OF_DONE.md`
+12. `COMPLETION_AND_STOP_PROTOCOL.md`
+13. `CHANGE_CONTROL.md`
 
-Project-specific decisions may specialize these generic rules. They must not silently weaken mandatory architecture, security, accessibility, UI/UX, evidence, or completion requirements.
+Project-specific decisions may specialize these generic rules. They must not silently weaken mandatory architecture, security, accessibility, UI/UX, dashboard identity, evidence, or completion requirements.
 
 ## 3. Mandatory Task Protocol
 
@@ -129,7 +130,9 @@ For every user-facing change:
 - record screenshots or equivalent evidence for material visual changes,
 - document every deviation in `docs/governance/EXCEPTIONS.md`.
 
-Accessibility failures and silent design-system deviations are defects.
+For dashboards, landing pages, project-status pages, and main web interfaces, also follow `PROJECT_DASHBOARD_GUIDE.md`. Preserve its shared project identity pattern, simple primary navigation, ecosystem return link where applicable, stable footer, copyright information, and visible version/build identification unless an approved project-specific requirement justifies a documented deviation.
+
+Accessibility failures and silent design-system or dashboard-guide deviations are defects.
 
 ## 9. Project Commands
 
