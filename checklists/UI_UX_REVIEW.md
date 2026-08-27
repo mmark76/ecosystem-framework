@@ -9,6 +9,20 @@ Use this checklist for any pull request that changes user-facing behavior or pre
 - [ ] Accent color is used selectively.
 - [ ] No unapproved palette or typography values were introduced.
 
+## Dashboard / Main Shell — when applicable
+
+- [ ] `PROJECT_DASHBOARD_GUIDE.md` was followed.
+- [ ] Header clearly identifies the project with a small project/ecosystem label and dominant project name.
+- [ ] Primary navigation is simple and limited to real top-level destinations.
+- [ ] Utility actions remain visually secondary to project navigation.
+- [ ] `Back to markellosecosystem` or the approved ecosystem return path is present where applicable.
+- [ ] Main content prioritizes a small number of clear, useful sections/cards rather than decorative complexity.
+- [ ] Footer includes the required copyright information.
+- [ ] Legal/information links are included only where applicable.
+- [ ] Project/dashboard version is always visible in the Footer.
+- [ ] Git-backed builds expose build date and short commit SHA when technically practical.
+- [ ] Any deviation from the dashboard guide is documented and approved.
+
 ## Tokens and Components
 
 - [ ] Semantic design tokens are used.
@@ -23,6 +37,7 @@ Use this checklist for any pull request that changes user-facing behavior or pre
 - [ ] Text scaling does not remove content or functionality.
 - [ ] Touch and pointer targets meet the minimum size.
 - [ ] Navigation behavior is appropriate for each platform.
+- [ ] Header, main content, and Footer remain usable without horizontal scrolling on small screens.
 
 ## Interaction States
 
