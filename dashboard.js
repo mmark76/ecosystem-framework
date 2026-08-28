@@ -21,6 +21,13 @@ const ALLOWED_APPEARANCE = Object.freeze({
 
 const TRANSLATIONS = Object.freeze({
   en: Object.freeze({
+    dashboardHome: 'Dashboard home',
+    dashboardUtilities: 'Dashboard utilities',
+    language: 'Language',
+    greekLanguage: 'Greek',
+    englishLanguage: 'English',
+    primaryNavigation: 'Primary navigation',
+    versionInformation: 'Version information',
     assistantName: 'Template Assistant',
     assistantStatus: 'Ready',
     assistantLabel: 'PROJECT ASSISTANT',
@@ -66,13 +73,22 @@ const TRANSLATIONS = Object.freeze({
     copyrightDescription: 'Copyright applies to the template and project-specific adoption materials.',
     languageStatus: 'English shell controls are active. Reference content remains English until project translations are supplied.',
     saved: 'Appearance preferences saved on this device.',
+    notPersisted: 'Appearance changes applied for this session but could not be saved on this device.',
     reset: 'Appearance preferences reset.',
+    resetNotPersisted: 'Appearance reset for this session, but the saved device preference could not be cleared.',
     themeDark: 'Dark',
     themeLight: 'Light',
     switchDark: 'Switch to dark theme',
     switchLight: 'Switch to light theme'
   }),
   el: Object.freeze({
+    dashboardHome: 'Αρχική σελίδα dashboard',
+    dashboardUtilities: 'Βοηθητικά στοιχεία dashboard',
+    language: 'Γλώσσα',
+    greekLanguage: 'Ελληνικά',
+    englishLanguage: 'Αγγλικά',
+    primaryNavigation: 'Κύρια πλοήγηση',
+    versionInformation: 'Πληροφορίες έκδοσης',
     assistantName: 'Βοηθός Προτύπου',
     assistantStatus: 'Έτοιμος',
     assistantLabel: 'ΒΟΗΘΟΣ ΕΡΓΟΥ',
@@ -118,7 +134,9 @@ const TRANSLATIONS = Object.freeze({
     copyrightDescription: 'Η προστασία πνευματικών δικαιωμάτων ισχύει για το πρότυπο και το υλικό κάθε έργου.',
     languageStatus: 'Τα στοιχεία του κελύφους εμφανίζονται στα Ελληνικά. Το περιεχόμενο αναφοράς παραμένει στα Αγγλικά μέχρι να δοθούν μεταφράσεις του έργου.',
     saved: 'Οι προτιμήσεις εμφάνισης αποθηκεύτηκαν σε αυτή τη συσκευή.',
+    notPersisted: 'Οι αλλαγές εμφάνισης εφαρμόστηκαν για αυτή τη συνεδρία, αλλά δεν ήταν δυνατή η αποθήκευσή τους στη συσκευή.',
     reset: 'Έγινε επαναφορά των προτιμήσεων εμφάνισης.',
+    resetNotPersisted: 'Η εμφάνιση επανήλθε για αυτή τη συνεδρία, αλλά δεν ήταν δυνατή η διαγραφή της αποθηκευμένης προτίμησης στη συσκευή.',
     themeDark: 'Σκούρο',
     themeLight: 'Φωτεινό',
     switchDark: 'Μετάβαση σε σκούρο θέμα',
@@ -329,9 +347,9 @@ function initializeDashboard(documentReference, windowReference) {
   const appearanceStatus = documentReference.getElementById('appearance-status');
   const updateAppearance = (patch) => {
     preferences = applyAppearance(documentReference, { ...preferences, ...patch });
-    saveAppearance(storage, preferences);
+    const persisted = saveAppearance(storage, preferences);
     applyTranslations(documentReference, language, preferences);
-    setText(appearanceStatus, TRANSLATIONS[language].saved);
+    setText(appearanceStatus, persisted ? TRANSLATIONS[language].saved : TRANSLATIONS[language].notPersisted);
   };
 
   documentReference.querySelectorAll('[data-language]').forEach((button) => {
@@ -366,14 +384,18 @@ function initializeDashboard(documentReference, windowReference) {
   });
 
   documentReference.getElementById('reset-appearance')?.addEventListener('click', () => {
-    try {
-      storage?.removeItem(APPEARANCE_STORAGE_KEY);
-    } catch {
-      // The visual reset remains usable when browser storage is unavailable.
+    let resetPersisted = false;
+    if (storage) {
+      try {
+        storage.removeItem(APPEARANCE_STORAGE_KEY);
+        resetPersisted = true;
+      } catch {
+        // The visual reset remains usable when browser storage is unavailable.
+      }
     }
     preferences = applyAppearance(documentReference, DEFAULT_APPEARANCE);
     applyTranslations(documentReference, language, preferences);
-    setText(appearanceStatus, TRANSLATIONS[language].reset);
+    setText(appearanceStatus, resetPersisted ? TRANSLATIONS[language].reset : TRANSLATIONS[language].resetNotPersisted);
   });
 
   const connectDialog = (triggerId, dialogId) => {
