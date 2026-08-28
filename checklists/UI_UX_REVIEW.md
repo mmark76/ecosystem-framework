@@ -13,14 +13,17 @@ Use this checklist for any pull request that changes user-facing behavior or pre
 
 - [ ] `PROJECT_DASHBOARD_GUIDE.md` was followed.
 - [ ] Header clearly identifies the project with a small project/ecosystem label and dominant project name.
+- [ ] Header utilities follow the canonical order: Assistant, GR, EN, ecosystem return, Light/Dark, Settings, Info.
+- [ ] The Assistant has a project-specific avatar, name, visible status, and accessible control contract.
 - [ ] Primary navigation is simple and limited to real top-level destinations.
 - [ ] Utility actions remain visually secondary to project navigation.
 - [ ] `Back to markellosecosystem` or the approved ecosystem return path is present where applicable.
 - [ ] Main content prioritizes a small number of clear, useful sections/cards rather than decorative complexity.
-- [ ] Footer includes the required copyright information.
-- [ ] Legal/information links are included only where applicable.
-- [ ] Project/dashboard version is always visible in the Footer.
-- [ ] Git-backed builds expose build date and short commit SHA when technically practical.
+- [ ] Settings has every canonical appearance control, reset, accessible close/Escape behavior, and validated local persistence.
+- [ ] Info has every canonical informational/legal entry, copyright, and build identity.
+- [ ] Footer contains exactly the copyright line and build-ID line with no navigation.
+- [ ] Populated builds use `vX.Y.Z_YYYYMMDD_HHMM_SHA`, a real Git SHA, and `Europe/Nicosia` time.
+- [ ] No GitHub link is visibly exposed in the dashboard UI.
 - [ ] Any deviation from the dashboard guide is documented and approved.
 
 ## Tokens and Components

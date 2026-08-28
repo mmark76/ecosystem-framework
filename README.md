@@ -1,6 +1,6 @@
 # AI-Guided Secure, Healthy & Consistent App Framework
 
-**Τρέχουσα έκδοση framework:** 1.1.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
+**Τρέχουσα έκδοση framework:** 2.0.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
 
 Γενικό, επαναχρησιμοποιήσιμο repository template για τον σχεδιασμό, την ασφαλή ανάπτυξη, την αρχιτεκτονική υγεία, την ενιαία εμπειρία UI/UX και την ελεγχόμενη ολοκλήρωση οποιουδήποτε μελλοντικού app.
 
@@ -25,7 +25,7 @@
 
 ## Dashboard reference template
 
-Το repository περιλαμβάνει ένα απλό, deployable reference dashboard στο root (`index.html`, `dashboard.css`, `dashboard.js`). Προορίζεται ως οπτικό και τεχνικό baseline για το `template.markellosecosystem.com` και ακολουθεί το `PROJECT_DASHBOARD_GUIDE.md`.
+Το repository περιλαμβάνει το canonical, dependency-free dashboard shell στο root (`index.html`, `dashboard.css`, `dashboard.js`). Αποτελεί πρότυπο για μελλοντική υιοθέτηση σύμφωνα με το `PROJECT_DASHBOARD_GUIDE.md`. Η εφαρμογή του σε υπάρχον repository ή deployment απαιτεί ξεχωριστά εγκεκριμένο task.
 
 Περισσότερα: `TEMPLATE_SITE.md`.
 

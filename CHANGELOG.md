@@ -9,6 +9,28 @@ backward-compatible fixes.
 version. Project/application versions and component versions, such as the design
 system token version, are independent.
 
+## [2.0.0] - 2026-08-28
+
+### Added
+
+- A canonical future-project dashboard header with ordered Assistant, GR, EN,
+  ecosystem return, Light/Dark, Settings, and Info utilities.
+- Accessible native dialogs, validated appearance-only local persistence, an
+  explicit Greek/English shell-localization contract, and dependency-free
+  verification tests.
+- Canonical `Europe/Nicosia` build timestamp handling and the visible
+  `vX.Y.Z_YYYYMMDD_HHMM_SHA` production identity contract.
+- Design-system component 1.2.0, exposing the existing neutral source tokens in
+  the maintained CSS adapter for accessible light/dark role mappings.
+
+### Changed
+
+- The canonical footer now contains exactly the copyright line and build-ID
+  line; informational/legal entries moved to Info.
+- The reference dashboard no longer exposes a visible GitHub link.
+- Existing projects do not adopt this breaking shell contract automatically;
+  each migration requires a separate approved task.
+
 ## [1.1.0] - 2026-08-27
 
 ### Added

@@ -1,4 +1,4 @@
-/* Markellos Ecosystem Design Tokens v1.1.0
+/* Markellos Ecosystem Design Tokens v1.2.0
  * Source of truth: design-system/tokens/tokens.json
  * Do not edit theme values inside application code.
  */
@@ -16,7 +16,19 @@
   --color-brand-100: #eaf2f8;
   --color-brand-50: #f5f9fc;
 
-  /* Neutrals and semantic roles */
+  /* Neutral source tokens */
+  --color-neutral-950: #111827;
+  --color-neutral-900: #1f2937;
+  --color-neutral-700: #4b5563;
+  --color-neutral-600: #5b6675;
+  --color-neutral-500: #6b7280;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-0: #ffffff;
+
+  /* Semantic roles */
   --color-background: #f8fafc;
   --color-surface: #ffffff;
   --color-surface-subtle: #f3f4f6;

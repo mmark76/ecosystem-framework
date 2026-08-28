@@ -56,3 +56,20 @@ Document sensitive and critical data flows.
 
 ## 9. Architecture Health Checks
 List automated or manual checks enforcing invariants.
+
+## Canonical Dashboard Reference Architecture
+
+- Style: repository-root static HTML/CSS/vanilla JavaScript.
+- Presentation: `index.html` and `dashboard.css`.
+- Shell behavior and pure formatting/validation rules: `dashboard.js`.
+- Platform-neutral design source: `design-system/tokens/tokens.json` with the
+  maintained `tokens.css` adapter.
+- Persistence: one optional browser-local appearance record; no server data.
+- External boundary: the explicit ecosystem-return HTTPS link only.
+- Dependencies, backend, authentication, analytics, remote fonts, and
+  third-party scripts: none.
+
+Browser storage is untrusted infrastructure input. `dashboard.js` validates and
+normalizes it before the presentation layer applies bounded data attributes and
+CSS custom properties. All dynamic text uses `textContent`; no HTML string is
+inserted into the DOM.

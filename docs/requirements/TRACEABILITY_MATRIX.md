@@ -9,6 +9,10 @@
 | FWK-003 | SCOPE-FWK-003 | Semantic Versioning; no new ADR required | `FRAMEWORK_VERSION`; `CHANGELOG.md`; `UPGRADE_GUIDE.md` | TEST-FWK-003 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 | FWK-004 | SCOPE-FWK-004 | Existing documentation model; no new ADR required | Project template documents containing instructional ID rows | TEST-FWK-004 | `evidence/framework-1.0.0-remediation.md` | mmark76 | VERIFIED |
 | FWK-005 | SCOPE-FWK-005 | Codex `AGENTS.md` discovery model; no new ADR required | `GLOBAL_CODEX_RULES.md`; `AGENTS.md`; `scripts/sync_global_codex_rules.py`; `docs/governance/GLOBAL_CODEX_RULES_SYNC.md` | TEST-FWK-005 | `evidence/global-codex-rules-1.0.0.md` | mmark76 | VERIFIED |
+| FWK-006 | SCOPE-FWK-006 | `PROJECT_DASHBOARD_GUIDE.md`; existing static-site architecture; no new ADR required | `index.html`; `dashboard.css`; `dashboard.js` | TEST-FWK-006 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
+| FWK-007 | SCOPE-FWK-007 | `docs/design/UI_UX_DESIGN_SYSTEM.md`; browser storage is an untrusted local boundary | `index.html`; `dashboard.css`; `dashboard.js` | TEST-FWK-007 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
+| FWK-008 | SCOPE-FWK-008 | `PROJECT_DASHBOARD_GUIDE.md`; `TEMPLATE_SITE.md`; semantic versioning | `index.html`; `dashboard.js`; `FRAMEWORK_VERSION`; `CHANGELOG.md`; `UPGRADE_GUIDE.md` | TEST-FWK-008 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
+| FWK-009 | SCOPE-FWK-009 | `UI_UX_RULES.md`; `docs/design/UI_UX_DESIGN_SYSTEM.md`; `docs/security/THREAT_MODEL.md` | `index.html`; `dashboard.css`; `dashboard.js`; `tests/dashboard-shell.test.cjs`; canonical documentation | TEST-FWK-009 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
 
 ## Production Deployment Traceability
 
