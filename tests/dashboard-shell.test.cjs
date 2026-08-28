@@ -105,6 +105,16 @@ test('local persistence writes appearance data under one namespaced key', () => 
     'spacing',
     'textSize'
   ]);
+
+  const blockedStorage = {
+    setItem: () => {
+      throw new Error('storage blocked');
+    }
+  };
+  assert.equal(shell.saveAppearance(blockedStorage, shell.DEFAULT_APPEARANCE), false);
+  assert.equal(shell.saveAppearance(null, shell.DEFAULT_APPEARANCE), false);
+  assert.match(javascript, /persisted \? TRANSLATIONS\[language\]\.saved : TRANSLATIONS\[language\]\.notPersisted/);
+  assert.match(javascript, /resetPersisted \? TRANSLATIONS\[language\]\.reset : TRANSLATIONS\[language\]\.resetNotPersisted/);
 });
 
 test('canonical header utilities appear in the required logical order', () => {
@@ -169,6 +179,19 @@ test('responsive and accessibility source contracts remain present', () => {
   assert.match(html, /<dialog id="settings-dialog"/);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /aria-haspopup="dialog"/);
+
+  for (const key of [
+    'dashboardHome',
+    'dashboardUtilities',
+    'language',
+    'greekLanguage',
+    'englishLanguage',
+    'primaryNavigation',
+    'versionInformation'
+  ]) {
+    assert.ok(html.includes(`data-i18n-aria-label="${key}"`), `Missing localized aria-label hook: ${key}`);
+    assert.equal((javascript.match(new RegExp(`\\b${key}:`, 'g')) ?? []).length, 2, `Missing EN/EL aria-label translations: ${key}`);
+  }
 });
 
 test('build metadata declares the required IANA timezone', () => {
