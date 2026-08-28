@@ -3,6 +3,17 @@
 This repository contains the dependency-free canonical shell for future
 Markellos ecosystem dashboards.
 
+## Official Reference Domain
+
+The final official name and reference deployment domain of the canonical
+template dashboard is:
+
+`template.markellosecosystem.com`
+
+This domain is the official online reference target for the canonical template.
+Its presence in this documentation does not authorize deployment, redeployment,
+DNS, hosting, or production changes. Those remain separate approved operations.
+
 ## Source Files
 
 - `index.html` — semantic shell, dialogs, reference content, and build metadata.
