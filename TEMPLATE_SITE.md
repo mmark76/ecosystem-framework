@@ -1,51 +1,117 @@
-# Dashboard Template Site
+# Canonical Dashboard Template Site
 
-This repository includes a minimal deployable reference dashboard intended to be published at:
+This repository contains the dependency-free canonical shell for future
+Markellos ecosystem dashboards.
 
-`template.markellosecosystem.com`
+## Source Files
 
-## Files
+- `index.html` — semantic shell, dialogs, reference content, and build metadata.
+- `dashboard.css` — responsive layout, appearance modes, dialog styling, and
+  accessible interaction states.
+- `dashboard.js` — language shell, local appearance preferences, modal behavior,
+  mobile navigation, copyright year, and build-ID formatting.
+- `design-system/tokens/tokens.css` — approved ecosystem token adapter.
+- `tests/dashboard-shell.test.cjs` — dependency-free contract and unit tests.
+- `PROJECT_DASHBOARD_GUIDE.md` — canonical adoption standard.
 
-- `index.html` — semantic page structure and sample content.
-- `dashboard.css` — responsive dashboard shell and component styling.
-- `dashboard.js` — current year, mobile navigation and build identification.
-- `design-system/tokens/tokens.css` — shared ecosystem design tokens.
-- `PROJECT_DASHBOARD_GUIDE.md` — governing dashboard standard.
+## Canonical Contracts
 
-## Purpose
+Header:
 
-The page is a visual and implementation reference, not a complete application. It demonstrates the default ecosystem structure:
+```text
+LEFT:  [Project identity]
+RIGHT: [Project Assistant] | GR | EN | Back to markellosecosystem | Light/Dark | Settings | Info
+```
 
-**Header → Main Content → Footer**
+Footer:
 
-with:
+```text
+© [year] Markellos Markides. All rights reserved.
+vX.Y.Z_YYYYMMDD_HHMM_SHA
+```
 
-- project/category label,
-- clear project name,
-- limited primary navigation,
-- utility area,
-- return link to `markellosecosystem.com`,
-- simple dashboard cards,
-- current phase/status block,
-- copyright information,
-- visible version/build identification.
+Settings provides Accent colour, Background colour, Font, Text size, Spacing,
+Reset appearance, and Close. The single local-storage record contains validated
+appearance preferences only.
 
-## Reuse
+Info contains Important Info, Feedback, License, Privacy, Analytics choices,
+Copyright protected, the copyright line, and the build ID. Reference actions
+explain where project-specific behavior belongs instead of linking to invented
+destinations.
 
-For a new project:
+The dashboard UI must not visibly expose GitHub. Engineering documentation may
+continue to reference repositories internally.
 
-1. Copy `index.html`, `dashboard.css` and `dashboard.js`.
-2. Reuse the shared design tokens or the approved project adapter.
-3. Replace the project label, project name, navigation and cards with real project content.
-4. Remove sections and utilities that are not needed.
-5. Preserve the Header/Main/Footer identity rules from `PROJECT_DASHBOARD_GUIDE.md`.
-6. Set the real project version in the `build-version` meta element.
-7. During deployment, inject or replace `build-date` and `build-commit` when the build system supports it.
+## Localization
 
-Do not invent a commit SHA. If no build metadata is available, the template intentionally displays `TEMPLATE` instead.
+The reference provides GR/EN architecture and translates canonical shell
+controls. Sample project content remains English, and the UI says so. Adopting
+projects must externalize and provide all project strings before claiming full
+Greek/English localization.
 
-## Deployment
+## Appearance Persistence
 
-The site has no dependency manifest, build step or runtime backend. Serve the repository root as a static site. The custom host can then map `template.markellosecosystem.com` to that static deployment.
+The key `markellos.dashboard.appearance.v1` stores only:
 
-The root `index.html` is deliberately used so the deployment does not require a custom output directory.
+```text
+colorMode, accent, background, font, textSize, spacing
+```
+
+Values are allow-listed or validated before use. Storage is optional: when it
+is blocked or unavailable, the controls remain functional for the current page.
+
+## Build Metadata Injection
+
+The reference metadata is intentionally incomplete:
+
+```html
+<meta name="build-version" content="2.0.0">
+<meta name="build-date" content="">
+<meta name="build-time" content="">
+<meta name="build-time-zone" content="Europe/Nicosia">
+<meta name="build-commit" content="">
+```
+
+This displays the non-fabricated fallback:
+
+```text
+v2.0.0_YYYYMMDD_HHMM_SHA
+```
+
+An approved build/release process must inject:
+
+- the real semantic project version;
+- `YYYYMMDD` and `HHMM` produced with an IANA-timezone API configured to
+  `Europe/Nicosia`;
+- the real Git commit, from which the formatter uses seven lowercase hex
+  characters.
+
+Do not use a fixed UTC offset and do not type a guessed SHA. A populated build
+ID must match:
+
+```regex
+^v[0-9]+\.[0-9]+\.[0-9]+_[0-9]{8}_[0-9]{4}_[0-9a-f]{7}$
+```
+
+`dashboard.js` exports dependency-free formatting helpers for approved build
+tooling and tests. Its timezone test covers both EET and EEST behavior.
+
+## Verification
+
+Run:
+
+```powershell
+node --check dashboard.js
+node --test tests/dashboard-shell.test.cjs
+```
+
+Also verify the page in a real browser at narrow, medium, and wide sizes,
+including Assistant, GR/EN, ecosystem return, Light/Dark, Settings persistence
+and reset, Info, mobile navigation, modal focus/Escape behavior, 200% zoom,
+console errors, horizontal overflow, and visual hierarchy.
+
+## Adoption Boundary
+
+This is a future-adoption standard. Do not propagate it to an existing
+repository or deployment without a separate approved task. Copying template
+files does not authorize a production deployment, DNS change, or release.

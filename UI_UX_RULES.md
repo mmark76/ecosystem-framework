@@ -20,6 +20,10 @@ Use this precedence order:
 
 Feature code must not redefine ecosystem-wide design decisions.
 
+The canonical dashboard shell in `PROJECT_DASHBOARD_GUIDE.md` is the default for
+future adoption. Updating this template does not authorize changes to existing
+repositories or deployments; each migration requires a separate approved task.
+
 ## 3. Ecosystem Identity
 
 All apps share:

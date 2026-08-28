@@ -61,6 +61,9 @@ Generated adapters must preserve token names and meaning. They must not become i
 The maintained web adapter exposes the typography source keys as
 `--font-weight-*` and `--line-height-*` variables. Component styles must use
 those variables rather than repeating numeric font weights or line heights.
+It also exposes the existing platform-neutral neutral palette as
+`--color-neutral-*` variables so approved light/dark role mappings do not copy
+raw color values into component styles.
 
 ## Governance
 

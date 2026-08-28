@@ -5,7 +5,7 @@ version of this template without overwriting project-specific decisions.
 
 ## Version Sources
 
-- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 1.1.0.
+- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 2.0.0.
 - `CHANGELOG.md` describes framework changes by semantic version.
 - Project/application versions remain project-owned and must continue to drive the visible version/build identity required by `PROJECT_DASHBOARD_GUIDE.md`.
 - Component versions, including the design-system token version, are independent and are updated according to their own compatibility rules.
@@ -33,6 +33,30 @@ unknown prior version as a known release.
 
 Skipping versions is allowed only when all intervening changelog entries and
 upgrade instructions are reviewed and satisfied.
+
+## Adopting the 2.0.0 Canonical Dashboard Shell
+
+Version 2.0.0 replaces the prior dashboard-shell contract. Adoption is not
+automatic. Every existing repository or deployed dashboard requires its own
+approved task, impact review, verification evidence, and deployment approval.
+
+For an approved adoption:
+
+1. Preserve the project's identity, content, navigation, scope, and approved
+   theme while mapping its shell to `PROJECT_DASHBOARD_GUIDE.md`.
+2. Customize the Assistant avatar and name without changing the shared
+   Assistant component contract.
+3. Supply complete Greek and English project strings before claiming full
+   localization. The reference translates shell controls only and says so.
+4. Keep appearance storage limited to the validated preferences documented in
+   `TEMPLATE_SITE.md`; do not add user, analytics, authentication, or sensitive
+   data to that store.
+5. Inject the real semantic version, Cyprus-local build date/time, and Git SHA
+   into the build metadata. Never replace the template placeholders with
+   invented values.
+6. Run the dependency-free shell tests plus project-specific browser,
+   accessibility, security, and responsive checks.
+7. Deploy only through the project's separately approved release process.
 
 ## Adopting the 1.1.0 Codex Rules Baseline
 

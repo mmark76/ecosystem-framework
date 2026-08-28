@@ -1,401 +1,249 @@
 # Project Dashboard Guide
 
-**Status:** Standard Guideline  
-**Scope:** All repositories and projects  
-**Purpose:** Consistent design and structure of project dashboards
+**Status:** Canonical standard
 
----
+**Framework version:** 2.0.0
 
-## 1. Σκοπός
+**Scope:** Future Markellos ecosystem dashboards and approved migrations
 
-Κάθε project που διαθέτει web dashboard, landing page, project status page ή άλλο βασικό user interface πρέπει να ακολουθεί κοινή σχεδιαστική λογική.
+**Purpose:** A consistent, accessible, identifiable dashboard shell
 
-Στόχος είναι όλα τα projects να έχουν:
+## 1. Canonical Structure
 
-- αναγνωρίσιμη κοινή ταυτότητα,
-- καθαρή και απλή πλοήγηση,
-- σταθερή λογική Header και Footer,
-- άμεση πρόσβαση στις σημαντικότερες πληροφορίες,
-- σαφή ταυτοποίηση έκδοσης,
-- απλό και λειτουργικό interface χωρίς περιττή πολυπλοκότητα.
-
-Το dashboard πρέπει να δίνει στον χρήστη μέσα σε λίγα δευτερόλεπτα απάντηση στα εξής:
-
-1. Σε ποιο project βρίσκομαι;
-2. Τι μπορώ να κάνω εδώ;
-3. Ποια είναι η τρέχουσα κατάσταση του project;
-4. Πού βρίσκονται οι βασικές ενότητες;
-5. Ποια έκδοση βλέπω;
-6. Πώς επιστρέφω στο κεντρικό ecosystem;
-
-## 2. Βασική σχεδιαστική αρχή
-
-Το dashboard πρέπει να είναι:
-
-- απλό,
-- καθαρό,
-- ευανάγνωστο,
-- responsive,
-- γρήγορο,
-- χωρίς περιττά visual effects,
-- χωρίς υπερβολική πληροφορία στην αρχική οθόνη.
-
-Η αρχική σελίδα δεν πρέπει να μετατρέπεται σε πολύπλοκο administration dashboard εφόσον δεν υπάρχει πραγματική ανάγκη.
-
-Προτιμάται η λογική:
-
-**Header → Main Content → Footer**
-
-με περιορισμένο αριθμό κύριων επιλογών.
-
-## 3. Header — Υποχρεωτική κοινή λογική
-
-Το Header αποτελεί βασικό στοιχείο ταυτότητας και πρέπει να ακολουθεί παρόμοια δομή σε όλα τα projects.
-
-### 3.1 Project Identity
-
-Στην αριστερή πλευρά:
-
-#### Μικρό project / ecosystem label
-
-Παράδειγμα:
-
-`ENGINEERING PROJECT`
-
-`STUDY PLATFORM`
-
-`HEALTH & SAFETY SYSTEM`
-
-`PROJECT MANAGEMENT TOOL`
-
-Το label πρέπει να είναι μικρότερο από τον κύριο τίτλο και να λειτουργεί ως κατηγορία του project.
-
-#### Κύριος τίτλος
-
-Ακριβώς κάτω από το label εμφανίζεται καθαρά το όνομα του project.
-
-Παράδειγμα:
-
-`Parking Canopy Design`
-
-`Study App`
-
-`Health & Safety App`
-
-Ο τίτλος πρέπει να είναι το κυρίαρχο στοιχείο του Header.
-
-### 3.2 Main Navigation
-
-Κάτω ή δίπλα από την ταυτότητα του project εμφανίζεται το βασικό navigation.
-
-Το navigation πρέπει να περιλαμβάνει μόνο τις κύριες λειτουργίες.
-
-Παράδειγμα:
-
-`Home | Site | Design | Calculations | Tender | Documents`
-
-ή:
-
-`Home | Sources | Practice | AI Studio | Important Info`
-
-Δεν πρέπει να δημιουργούνται πολλές επιλογές πρώτου επιπέδου. Δευτερεύουσες λειτουργίες μπορούν να τοποθετούνται μέσα στις αντίστοιχες ενότητες.
-
-### 3.3 Utility Area
-
-Στη δεξιά πλευρά του Header μπορούν να υπάρχουν, ανάλογα με το project:
-
-- γλώσσα,
-- Settings,
-- Feedback,
-- AI Assistant,
-- user/account information,
-- project-specific utilities.
-
-Οι επιλογές αυτές πρέπει να είναι οπτικά δευτερεύουσες σε σχέση με το project navigation.
-
-### 3.4 Back to Ecosystem
-
-Όπου είναι κατάλληλο, το Header πρέπει να περιλαμβάνει εμφανή σύνδεσμο:
-
-**Back to markellosecosystem**
-
-ή αντίστοιχη ονομασία του κεντρικού ecosystem.
-
-Ο σύνδεσμος αυτός πρέπει να βρίσκεται κατά προτίμηση στη δεξιά πλευρά του Header.
-
-Σκοπός είναι όλα τα ανεξάρτητα projects να παραμένουν οπτικά και λειτουργικά συνδεδεμένα με το συνολικό ecosystem.
-
-## 4. Main Content
-
-Η αρχική σελίδα πρέπει να παρουσιάζει μόνο τις σημαντικότερες λειτουργίες ή πληροφορίες.
-
-Προτιμάται η χρήση **μεγάλων καθαρών cards**.
-
-Κάθε card πρέπει να έχει:
-
-- μικρό category label, όπου χρειάζεται,
-- σαφή τίτλο,
-- σύντομη περιγραφή,
-- μία ή δύο βασικές ενέργειες.
-
-Παράδειγμα:
-
-### SITE & LAYOUT
-
-#### Site Data
-
-View parcels, parking layouts, access points and existing conditions.
-
-`Open Site Data`
-
-Δεν πρέπει να δημιουργούνται cards μόνο για αισθητικούς λόγους. Κάθε card πρέπει να αντιπροσωπεύει πραγματική ενότητα ή workflow.
-
-## 5. Project Dashboard / Status
-
-Όπου το project εξελίσσεται σε φάσεις, πρέπει να υπάρχει πολύ απλή ένδειξη κατάστασης.
-
-Ενδεικτικές καταστάσεις:
-
-- ✅ Confirmed
-- 🟡 In Progress
-- ⏳ Next
-- ⬜ Pending
-- ⚠️ To Be Confirmed
-
-Δεν απαιτούνται περίπλοκα charts όταν ένας απλός πίνακας ή λίστα αρκεί.
-
-Το dashboard πρέπει να δείχνει κατά προτίμηση:
-
-- Current Phase
-- Current Status
-- Next Action
-- Open Items
-
-Παράδειγμα:
-
-**Current Phase:** Preliminary Design  
-**Next Action:** Typical Γ / Τ canopy geometry  
-**Open Items:** Fabric properties, soil verification
-
-## 6. Footer — Υποχρεωτική κοινή λογική
-
-Το Footer αποτελεί μόνιμο μέρος της ταυτότητας όλων των projects και πρέπει να βρίσκεται στο κάτω μέρος κάθε κύριας σελίδας.
-
-### 6.1 Copyright
-
-Να εμφανίζεται:
-
-`© [YEAR] Markellos Markides. All rights reserved.`
-
-Το έτος μπορεί να ενημερώνεται αυτόματα.
-
-### 6.2 Legal / Information Links
-
-Όπου εφαρμόζεται μπορούν να υπάρχουν:
-
-- License
-- Privacy
-- Analytics choices
-- Copyright protected
-- Terms
-- Documentation
-
-Δεν χρειάζεται όλα τα projects να έχουν όλα τα links. Προστίθενται μόνο όσα έχουν πραγματική χρήση.
-
-### 6.3 Version Identification
-
-Στο Footer πρέπει **πάντα** να εμφανίζεται η έκδοση του project/dashboard.
-
-Προτεινόμενη μορφή:
-
-`v1.2.0`
-
-Για projects που συνδέονται με Git:
-
-`v1.2.0_20260827_a1b2c3d`
-
-όπου:
-
-- `1.2.0` = semantic version,
-- `20260827` = ημερομηνία build/release,
-- `a1b2c3d` = short Git commit SHA.
-
-Η version information πρέπει να είναι διακριτική αλλά πάντοτε ορατή.
-
-## 7. Git / Build Identification
-
-Όπου το dashboard παράγεται από Git repository, προτιμάται η αυτόματη εισαγωγή:
-
-- app/project version,
-- build date,
-- short commit SHA.
-
-Στόχος είναι από οποιοδήποτε screenshot, bug report, test, deployment ή audit να μπορεί να προσδιοριστεί ακριβώς ποια έκδοση του project εμφανίζεται.
-
-Δεν πρέπει να χρησιμοποιείται χειροκίνητο commit SHA όταν μπορεί να παράγεται αυτόματα κατά το build/deployment.
-
-## 8. Visual Identity
-
-Κάθε project μπορεί να έχει δικά του:
-
-- accent colours,
-- icons,
-- imagery,
-- domain-specific visual elements.
-
-Ωστόσο πρέπει να διατηρείται η κοινή λογική:
-
-- καθαρό Header,
-- σαφής project title,
-- απλό navigation,
-- cards με αρκετό whitespace,
-- καθαρή τυπογραφική ιεραρχία,
-- διακριτικό Footer,
-- version identification.
-
-Η συνέπεια της δομής είναι σημαντικότερη από την απόλυτη ομοιομορφία χρωμάτων.
-
-## 9. Typography
-
-Η ιεραρχία πρέπει να είναι σαφής:
-
-1. Project title
-2. Page title
-3. Section / card title
-4. Body text
-5. Metadata / labels / version
-
-Αποφεύγονται:
-
-- υπερβολικά πολλά font sizes,
-- πολλά διαφορετικά fonts,
-- περιττά bold στοιχεία,
-- μεγάλα blocks κεφαλαίων.
-
-Τα uppercase labels επιτρέπονται κυρίως για μικρές κατηγορίες όπως:
-
-`ENGINEERING PROJECT`
-
-`CURRENT STATUS`
-
-`DESIGN`
-
-## 10. Responsive Behaviour
-
-Το Header, το περιεχόμενο και το Footer πρέπει να λειτουργούν σωστά σε:
-
-- desktop,
-- laptop,
-- tablet,
-- mobile.
-
-Σε μικρές οθόνες:
-
-- τα navigation items μπορούν να μεταφέρονται σε menu,
-- τα cards γίνονται μονή στήλη,
-- utility controls αναδιατάσσονται,
-- δεν πρέπει να δημιουργείται οριζόντιο scrolling.
-
-Η βασική πληροφορία του project πρέπει να παραμένει άμεσα ορατή.
-
-## 11. Accessibility
-
-Τα dashboards πρέπει να χρησιμοποιούν:
-
-- επαρκή contrast,
-- semantic HTML,
-- σωστά headings,
-- keyboard-accessible navigation,
-- σαφή focus states,
-- labels στα controls,
-- κατάλληλα alt texts για ουσιαστικές εικόνες.
-
-Η αισθητική δεν πρέπει να μειώνει τη χρηστικότητα.
-
-## 12. Αποφυγή υπερβολικής πολυπλοκότητας
-
-Δεν προστίθενται χωρίς πραγματικό λόγο:
-
-- animations,
-- dashboards με δεκάδες metrics,
-- complex charts,
-- carousel components,
-- nested menus,
-- floating widgets,
-- visual effects,
-- glassmorphism,
-- excessive shadows,
-- decorative gradients,
-- unnecessary JavaScript.
-
-Η απλότητα αποτελεί βασική απαίτηση.
-
-## 13. Recommended Home Layout
-
-Τυπική δομή:
+Use the smallest useful page structure:
 
 ```text
-┌─────────────────────────────────────────────────┐
-│ PROJECT LABEL                     Utilities     │
-│ Project Name                  Back to Ecosystem │
-│                                                 │
-│ Home | Section | Section | Section | Documents  │
-└─────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────┐
-│                                                 │
-│   Main Card      Main Card      Main Card       │
-│                                                 │
-│   Description    Description    Description     │
-│                                                 │
-│   Action         Action         Action          │
-│                                                 │
-└─────────────────────────────────────────────────┘
-
-              Current Phase / Status
-
-───────────────────────────────────────────────────
-
-      © 2026 Markellos Markides.
-      License | Privacy | Copyright protected
-
-                         v1.0.0_YYYYMMDD_SHA
+Header → Main Content → Footer
 ```
 
-## 14. Repository Integration
+The shell provides common identity and utilities. Project content, navigation,
+accent, iconography, and Assistant details remain project-specific.
 
-Κάθε repository με dashboard πρέπει, όπου είναι πρακτικό, να περιλαμβάνει αναφορά σε αυτόν τον οδηγό.
+Existing repositories and deployed dashboards do not adopt a newer canonical
+shell automatically. Each existing project requires a separate approved task,
+impact review, verification, pull request, and deployment decision.
 
-Το project-specific `AGENTS.md` ή development documentation πρέπει να αναφέρει ότι:
+## 2. Canonical Header
 
-> Any project dashboard, landing page or main web interface must follow `PROJECT_DASHBOARD_GUIDE.md` unless a documented project-specific requirement justifies a deviation.
+The header has two logical sides.
 
-## 15. Επιτρεπόμενες αποκλίσεις
+### Left
 
-Ο οδηγός καθορίζει **κοινή φιλοσοφία**, όχι απόλυτα ίδιο UI.
+```text
+[Project logo/icon] [Project identity]
+```
 
-Ένα project μπορεί να αποκλίνει όταν:
+The identity includes a concise ecosystem/project label and the dominant
+project name. Replace the reference `DT` mark with the approved project asset or
+monogram during adoption.
 
-- το domain απαιτεί διαφορετική διάταξη,
-- υπάρχουν ειδικές accessibility απαιτήσεις,
-- υπάρχει σημαντικός λειτουργικός λόγος,
-- διαφορετικό UI βελτιώνει ουσιαστικά τη χρήση.
+### Right
 
-Η απόκλιση πρέπει να είναι συνειδητή και όχι αποτέλεσμα ασυνέπειας.
+The canonical logical order is mandatory:
 
-Τα ακόλουθα όμως θεωρούνται σταθερές αρχές:
+```text
+[Project Assistant] | GR | EN | Back to markellosecosystem | Light/Dark | Settings | Info
+```
 
-- σαφής project identity,
-- σταθερή λογική Header,
-- σύνδεση με το ecosystem όπου απαιτείται,
-- απλό navigation,
-- καθαρό Main Content,
-- σταθερή λογική Footer,
-- copyright information,
-- version/build identification.
+Visual wrapping or an accessible compact layout may adapt this sequence on
+smaller screens, but the DOM/focus order and feature availability must remain.
 
-## 16. Τελική αρχή
+### Project Assistant
 
-Κάθε dashboard πρέπει να φαίνεται ότι αποτελεί μέρος της ίδιας οικογένειας projects χωρίς να χάνει τη δική του ταυτότητα.
+Every adopted dashboard includes the shared Assistant component pattern:
 
-**Η κοινή ταυτότητα προκύπτει κυρίως από τη δομή, το Header, το Footer, την πλοήγηση και την πειθαρχία στην απλότητα — όχι από την αντιγραφή του ίδιου ακριβώς design σε κάθε project.**
+- project-specific icon or avatar;
+- project-specific Assistant name;
+- visible status dot and status text;
+- accessible button name and dialog relationship;
+- a safe reference panel until an approved Assistant integration exists.
+
+The template uses `Template Assistant` and `TA`. Adopting projects replace both
+with their approved identity. The shell must not be coupled to one Assistant
+provider or backend.
+
+### Language
+
+`GR` and `EN` are the canonical controls. Interface strings must be externalized
+and layouts must tolerate Greek/English expansion without fixed-width labels.
+
+The reference translates shell controls and explicitly states that its sample
+content remains English. A project must supply complete project strings before
+claiming full localization. Language choice is not written to appearance
+storage.
+
+### Ecosystem Return
+
+The visible label is:
+
+```text
+Back to markellosecosystem
+```
+
+The target is always `https://markellosecosystem.com/` unless a separately
+approved ecosystem destination replaces it.
+
+### Light/Dark
+
+Light/Dark is an immediate header action. It is separate from detailed Settings
+and may share the same validated appearance preference record.
+
+## 3. Settings
+
+Settings opens an accessible modal dialog containing exactly these canonical
+appearance capabilities:
+
+- Accent colour
+- Background colour
+- Font
+- Text size
+- Spacing
+- Reset appearance
+- Close
+
+The native modal must support keyboard operation, visible focus, Escape, focus
+containment, and focus return to the invoking Settings control.
+
+Preferences are local to the device and require no server. The canonical
+storage record is namespaced and contains only validated appearance fields:
+
+```text
+colorMode, accent, background, font, textSize, spacing
+```
+
+Never store identity, authentication, analytics, Assistant conversation, or
+sensitive data in that record. Storage failure must leave the UI usable.
+
+## 4. Info
+
+Info opens an accessible panel/dialog with this structure:
+
+```text
+Important Info
+Feedback
+────────────────
+License
+Privacy
+Analytics choices
+Copyright protected
+────────────────
+© [year] Markellos Markides. All rights reserved.
+vX.Y.Z_YYYYMMDD_HHMM_SHA
+```
+
+Reference entries that do not yet have project destinations use native
+disclosures with clear, non-broken placeholder explanations. They must not use
+invented URLs.
+
+Do not expose a visible GitHub link anywhere in the dashboard UI. Internal
+repository references in engineering documentation remain allowed.
+
+## 5. Canonical Footer
+
+The footer always contains exactly two logical lines and no navigation:
+
+```text
+© [year] Markellos Markides. All rights reserved.
+vX.Y.Z_YYYYMMDD_HHMM_SHA
+```
+
+License, Privacy, Analytics choices, Copyright protected, Documentation, and
+other informational actions belong in Info when applicable.
+
+## 6. Version and Build Identity
+
+The production format is mandatory:
+
+```text
+vX.Y.Z_YYYYMMDD_HHMM_SHA
+```
+
+- `X.Y.Z`: semantic application/dashboard version;
+- `YYYYMMDD`: build/release date in Cyprus local time;
+- `HHMM`: build/release time in Cyprus local time;
+- `SHA`: real seven-character lowercase Git commit SHA.
+
+All build/release timestamp logic uses the IANA timezone:
+
+```text
+Europe/Nicosia
+```
+
+Do not use a fixed offset. The IANA timezone must apply EET (`UTC+2`) or EEST
+(`UTC+3`) according to Cyprus daylight-saving rules.
+
+The static reference has no build pipeline and therefore displays:
+
+```text
+v2.0.0_YYYYMMDD_HHMM_SHA
+```
+
+This explicit template ID preserves the production shape without inventing a
+timestamp or SHA. Production adoption must inject all real metadata fields
+before release. A populated value must match:
+
+```regex
+^v[0-9]+\.[0-9]+\.[0-9]+_[0-9]{8}_[0-9]{4}_[0-9a-f]{7}$
+```
+
+## 7. Main Content and Navigation
+
+Keep primary navigation to real top-level destinations. Main content should
+answer what the project is, what a user can do, current state, next action, and
+open items. Prefer a few purposeful cards over decorative containers or dense
+administration screens.
+
+## 8. Responsive Contract
+
+Verify at minimum:
+
+- narrow/mobile below `30rem`;
+- medium/tablet around `48rem`;
+- desktop/wide at `80rem` or wider.
+
+Controls may wrap, navigation may collapse, and cards may become a single
+column. No canonical utility may disappear, page-level horizontal scrolling is
+forbidden, and the logical order must remain stable.
+
+## 9. Accessibility Contract
+
+Target WCAG 2.2 AA where applicable:
+
+- semantic landmarks and heading order;
+- keyboard-operable controls and navigation;
+- visible focus and logical focus order;
+- correctly managed modal focus and Escape behavior;
+- 44 × 44 CSS px minimum interactive targets;
+- sufficient text, icon, and component contrast;
+- 200% zoom/text-scaling resilience;
+- Greek/English expansion resilience;
+- reduced-motion support;
+- no keyboard traps or color-only status.
+
+## 10. Security and Privacy Contract
+
+The reference shell uses HTML, CSS, vanilla JavaScript, and approved local
+tokens only. It has no framework, package, backend, analytics, authentication,
+third-party script, or remote font.
+
+Treat local storage as untrusted input. Validate every persisted appearance
+value before applying it, use safe DOM text APIs, and never place secrets or
+personal data in client code or storage.
+
+## 11. Adoption and Verification
+
+During approved adoption:
+
+1. replace the project identity and Assistant details;
+2. select an approved theme and preserve shared tokens;
+3. provide complete project-specific navigation and content;
+4. provide real Info destinations where approved;
+5. provide full Greek/English strings or declare the supported subset;
+6. inject real build metadata using `Europe/Nicosia`;
+7. run source tests, browser interaction tests, responsive checks,
+   accessibility checks, security review, and visual QA;
+8. record evidence and deviations;
+9. deploy only through a separately approved project release.
+
+The common identity comes from consistent contracts and behavior—not from
+making every project visually identical.

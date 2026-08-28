@@ -21,6 +21,7 @@
 - `design/UI_UX_DESIGN_SYSTEM.md`
 - `../UI_UX_RULES.md`
 - `../PROJECT_DASHBOARD_GUIDE.md`
+- `../TEMPLATE_SITE.md`
 - `../design-system/README.md`
 - `../design-system/tokens/tokens.json`
 - `../design-system/tokens/tokens.css`

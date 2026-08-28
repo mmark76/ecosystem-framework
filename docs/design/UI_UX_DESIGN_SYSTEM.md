@@ -1,8 +1,12 @@
 # Markellos Ecosystem UI/UX Design System
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Baseline standard for all new and existing apps  
 **Applies to:** Web, mobile, tablet, desktop, installable web apps, and hybrid applications
+
+The canonical dashboard shell is the default for new work. Existing apps remain
+subject to this design baseline, but shell migration is never automatic and
+requires separate project approval, regression verification, and release scope.
 
 ## 1. Objective
 

@@ -13,8 +13,12 @@ the template.
 | SCOPE-FWK-003 | Establish simple semantic framework versioning and upgrade guidance. | Mandatory | mmark76 | Repository-level framework version only; no release automation. |
 | SCOPE-FWK-004 | Make instructional identifier rows unmistakably non-project data. | Mandatory | mmark76 | Preserve the documentation model while preventing false approvals. |
 | SCOPE-FWK-005 | Establish canonical, portable global Codex working rules with safe synchronization guidance. | Mandatory | mmark76 | Global rules version 1.0.0; repository-specific instructions remain authoritative. |
+| SCOPE-FWK-006 | Establish the canonical future dashboard header and ordered utility controls. | Mandatory | mmark76 | Project identity plus Assistant, GR, EN, ecosystem return, Light/Dark, Settings, and Info. |
+| SCOPE-FWK-007 | Add accessible, locally persisted appearance settings without a backend or dependency. | Mandatory | mmark76 | Appearance data only; validated before use. |
+| SCOPE-FWK-008 | Establish the canonical Info content, two-line footer, and production build-identity contract. | Mandatory | mmark76 | `Europe/Nicosia`; no fabricated build metadata or visible GitHub link. |
+| SCOPE-FWK-009 | Verify responsive, localization-shell, accessibility, and security behavior for the canonical shell. | Mandatory | mmark76 | Existing projects and deployments remain out of scope and require separate approval. |
 
-Approval sources: repository-owner remediation requests dated 2026-08-27.
+Approval sources: repository-owner remediation requests dated 2026-08-27 and canonical-dashboard request dated 2026-08-28.
 
 ## Approved Production Deployment Scope
 
