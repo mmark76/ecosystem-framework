@@ -14,6 +14,11 @@ This domain is the official online reference target for the canonical template.
 Its presence in this documentation does not authorize deployment, redeployment,
 DNS, hosting, or production changes. Those remain separate approved operations.
 
+The reusable repository template intentionally does **not** contain a root
+`CNAME` file. Domain binding for `template.markellosecosystem.com` belongs to
+the separately approved Cloudflare deployment configuration, so repositories
+created from this template do not inherit the canonical template site's domain.
+
 ## Source Files
 
 - `index.html` — semantic shell, dialogs, reference content, and build metadata.
