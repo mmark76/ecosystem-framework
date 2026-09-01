@@ -1,4 +1,10 @@
-# AI-Guided Secure, Healthy & Consistent App Framework
+# Ecosystem Framework — The DNA
+
+**Descriptor:** Framework & Templates
+
+**GitHub repository:** `mmark76/ecosystem-framework`
+
+AI-guided framework for secure, healthy, and consistent application delivery.
 
 **Τρέχουσα έκδοση framework:** 2.0.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
 
