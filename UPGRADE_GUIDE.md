@@ -60,7 +60,7 @@ For an approved adoption:
 
 ## Adopting the 1.1.0 Codex Rules Baseline
 
-1. Treat `GLOBAL_CODEX_RULES.md` from `mmark76/template-repo` as the canonical shared source.
+1. Treat `GLOBAL_CODEX_RULES.md` from `mmark76/ecosystem-framework` as the canonical shared source.
 2. Determine the effective root Codex instruction file: use a non-empty root `AGENTS.override.md` when present; otherwise use root `AGENTS.md`.
 3. Preview synchronization with `scripts/sync_global_codex_rules.py` and review the complete diff before using `--write`.
 4. Preserve project-specific content outside the managed markers and keep it after the shared block so it can specialize the defaults.
