@@ -1,6 +1,6 @@
 # Synchronizing Global Codex Rules
 
-`GLOBAL_CODEX_RULES.md` at the root of `mmark76/template-repo` is the canonical source for the shared cross-repository Codex rules.
+`GLOBAL_CODEX_RULES.md` at the root of `mmark76/ecosystem-framework` is the canonical source for the shared cross-repository Codex rules.
 
 Each repository receives a portable copy in its effective root Codex instruction file:
 
@@ -14,7 +14,7 @@ The portable block is delimited by versioned managed markers. Content outside th
 
 1. Verify the target repository's branch, `HEAD`, remote-tracking state, working tree, open pull requests, and any existing `chore/adopt-global-codex-rules` branch.
 2. Create an isolated task branch from the verified intended base.
-3. From `template-repo`, preview the update:
+3. From `ecosystem-framework`, preview the update:
 
    ```text
    python scripts/sync_global_codex_rules.py /path/to/repository
