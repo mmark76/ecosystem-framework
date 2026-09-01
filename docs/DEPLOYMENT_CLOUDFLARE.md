@@ -31,7 +31,7 @@ custom-domain configuration is authoritative.
 3. Create an archive containing only files tracked by the approved commit:
 
    ```powershell
-   git archive --format=zip --output=ecosystem-framework-deploy.zip <approved-commit>
+   git archive --format=zip --output=template-repo-deploy.zip <approved-commit>
    ```
 
 4. In Cloudflare, open **Workers & Pages**, select the
