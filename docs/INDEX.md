@@ -8,6 +8,9 @@
 - `../CHANGELOG.md`
 - `../UPGRADE_GUIDE.md`
 
+## Operating Model
+- `../PROJECT_OPERATING_MODEL.md`
+
 ## Product
 - `product/PROJECT_BRIEF.md`
 - `product/RELEASE_SCOPE.md`

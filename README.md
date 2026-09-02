@@ -6,7 +6,7 @@
 
 AI-guided framework for secure, healthy, and consistent application delivery.
 
-**Τρέχουσα έκδοση framework:** 2.0.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
+**Τρέχουσα έκδοση framework:** 2.1.0 — πηγή αλήθειας: `FRAMEWORK_VERSION`
 
 Γενικό, επαναχρησιμοποιήσιμο repository template για τον σχεδιασμό, την ασφαλή ανάπτυξη, την αρχιτεκτονική υγεία, την ενιαία εμπειρία UI/UX και την ελεγχόμενη ολοκλήρωση οποιουδήποτε μελλοντικού app.
 
@@ -15,6 +15,7 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 Να καθοδηγεί ανθρώπους, ChatGPT και AI coding agents όπως το Codex ώστε κάθε νέο project:
 
 - να ξεκινά με σαφές πρόβλημα, στόχους και πεπερασμένο scope,
+- να λειτουργεί με το canonical Hybrid Agile + DevOps + GitOps operating model του Markellos Ecosystem,
 - να αποκτά τη μικρότερη επαρκή αρχιτεκτονική,
 - να αναπτύσσεται modular, ασφαλώς και ελέγξιμα,
 - να ακολουθεί ενιαίο, αναγνωρίσιμο και προσβάσιμο UI/UX σε όλες τις πλατφόρμες,
@@ -62,6 +63,7 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 | `scripts/sync_global_codex_rules.py` | Dry-run-first συγχρονισμός μόνο του managed shared block |
 | `docs/governance/GLOBAL_CODEX_RULES_SYNC.md` | Ασφαλής διαδικασία διάδοσης των κοινών κανόνων |
 | `FRAMEWORK.md` | Κύκλος ζωής και συνολικό μοντέλο |
+| `PROJECT_OPERATING_MODEL.md` | Canonical Hybrid Agile + DevOps + GitOps delivery model για software και infrastructure projects |
 | `FRAMEWORK_VERSION` | Μοναδική πηγή αλήθειας για την έκδοση του framework |
 | `CHANGELOG.md` | Ιστορικό εκδόσεων του framework |
 | `UPGRADE_GUIDE.md` | Ασφαλής υιοθέτηση νεότερων template changes από υπάρχοντα repositories |
