@@ -9,6 +9,32 @@ backward-compatible fixes.
 version. Project/application versions and component versions, such as the design
 system token version, are independent.
 
+## [2.1.0] - 2026-09-02
+
+### Added
+
+- Canonical `PROJECT_OPERATING_MODEL.md` for Markellos Ecosystem software and
+  infrastructure projects.
+- Hybrid Agile planning with product goals, roadmaps, backlogs, controlled
+  iterations/change windows, verified increments, and continuous learning.
+- DevOps delivery rules connecting Git/PR review, automated validation,
+  security, deployment, runtime verification, operations, and recovery.
+- GitOps principles for version-controlled declared state, reviewed change
+  intent, reproducibility, actual-state verification, drift awareness, and
+  controlled reconciliation without requiring a specific GitOps platform.
+- Risk-based tailoring for lightweight, standard, and high-impact production
+  changes.
+
+### Changed
+
+- `FRAMEWORK.md` now identifies Hybrid Agile + DevOps + GitOps principles as the
+  ecosystem-wide operating model.
+- Framework navigation now exposes the operating model as a first-class
+  document.
+- Existing repositories continue to adopt framework changes only through
+  project-specific reviewed upgrades; no bulk production or repository mutation
+  is authorized by this framework release.
+
 ## [2.0.0] - 2026-08-28
 
 ### Added

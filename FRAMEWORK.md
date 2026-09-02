@@ -27,6 +27,22 @@ Idea
 → Retirement
 ```
 
+## Operating Model
+
+Markellos Ecosystem software and infrastructure projects follow the canonical
+`PROJECT_OPERATING_MODEL.md` using **Hybrid Agile + DevOps + GitOps principles**.
+
+The operating model provides the delivery loop that connects product intent,
+roadmaps, backlogs, iterations, Git/PR review, automated validation, security,
+deployment, runtime verification, operations, learning, and the next iteration.
+It uses risk-based tailoring so low-impact work stays lightweight while
+production, security, database, network, and other high-impact changes retain
+explicit gates, rollback, evidence, and owner approval where required.
+
+Existing projects do not receive framework changes automatically. Adoption is
+controlled and project-specific through the framework versioning and upgrade
+process.
+
 ## Project Initialization
 
 Immediately after creating a repository from this template, complete
