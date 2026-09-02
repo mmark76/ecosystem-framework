@@ -11,9 +11,14 @@ const repositoryRoot = join(__dirname, '..');
 const html = readFileSync(join(repositoryRoot, 'index.html'), 'utf8');
 const css = readFileSync(join(repositoryRoot, 'dashboard.css'), 'utf8');
 const javascript = readFileSync(join(repositoryRoot, 'dashboard.js'), 'utf8');
+const frameworkVersion = readFileSync(join(repositoryRoot, 'FRAMEWORK_VERSION'), 'utf8').trim();
 const tokenJson = JSON.parse(readFileSync(join(repositoryRoot, 'design-system', 'tokens', 'tokens.json'), 'utf8'));
 const tokenCss = readFileSync(join(repositoryRoot, 'design-system', 'tokens', 'tokens.css'), 'utf8');
 const designSystemDoc = readFileSync(join(repositoryRoot, 'docs', 'design', 'UI_UX_DESIGN_SYSTEM.md'), 'utf8');
+
+function metaContent(name) {
+  return html.match(new RegExp(`<meta name="${name}" content="([^"]*)">`))?.[1] ?? '';
+}
 
 test('Cyprus build timestamps use Europe/Nicosia and respect seasonal offsets', () => {
   assert.deepEqual(shell.formatCyprusBuildTimestamp(new Date('2026-01-15T12:30:00Z')), {
@@ -34,7 +39,7 @@ test('a populated build ID uses a real repository SHA and canonical format', () 
     encoding: 'utf8'
   }).trim();
   const timestamp = shell.formatCyprusBuildTimestamp(new Date());
-  const buildId = shell.formatBuildId({ version: '2.0.0', commit, ...timestamp });
+  const buildId = shell.formatBuildId({ version: frameworkVersion, commit, ...timestamp });
 
   assert.match(buildId, shell.BUILD_ID_PATTERN);
   assert.match(buildId, /^v[0-9]+\.[0-9]+\.[0-9]+_[0-9]{8}_[0-9]{4}_[0-9a-f]{7}$/);
@@ -42,14 +47,14 @@ test('a populated build ID uses a real repository SHA and canonical format', () 
 });
 
 test('missing or invalid build metadata produces an explicit non-fabricated template ID', () => {
-  assert.equal(shell.formatBuildId({ version: '2.0.0' }), 'v2.0.0_YYYYMMDD_HHMM_SHA');
+  assert.equal(shell.formatBuildId({ version: frameworkVersion }), `v${frameworkVersion}_YYYYMMDD_HHMM_SHA`);
   assert.equal(shell.formatBuildId({
-    version: '2.0.0',
+    version: frameworkVersion,
     date: '20260828',
     time: '0952',
     commit: 'cd95d3c',
     timeZone: 'UTC+3'
-  }), 'v2.0.0_YYYYMMDD_HHMM_SHA');
+  }), `v${frameworkVersion}_YYYYMMDD_HHMM_SHA`);
 });
 
 test('appearance preferences accept only the documented bounded values', () => {
@@ -134,6 +139,15 @@ test('canonical header utilities appear in the required logical order', () => {
   assert.match(html, /href="https:\/\/markellosecosystem\.com\/"/);
 });
 
+test('Framework identity replaces visible template identity', () => {
+  assert.match(html, /<span class="brand-mark" aria-hidden="true">EF<\/span>/);
+  assert.match(html, /<span class="project-name">Ecosystem Framework<\/span>/);
+  assert.match(html, /Framework Assistant/);
+  assert.match(javascript, /assistantName: 'Framework Assistant'/);
+  assert.doesNotMatch(html, /Dashboard Template|Template Assistant/);
+  assert.doesNotMatch(javascript, /Template Assistant|Βοηθός Προτύπου/);
+});
+
 test('Settings, Info and footer contracts are complete', () => {
   for (const label of [
     'Accent colour',
@@ -159,7 +173,16 @@ test('Settings, Info and footer contracts are complete', () => {
   }
 
   assert.equal((html.match(/data-footer-line=/g) ?? []).length, 2);
-  assert.match(html, /v2\.0\.0_YYYYMMDD_HHMM_SHA/);
+
+  const sourceBuildId = shell.formatBuildId({
+    version: metaContent('build-version'),
+    date: metaContent('build-date'),
+    time: metaContent('build-time'),
+    timeZone: metaContent('build-time-zone'),
+    commit: metaContent('build-commit')
+  });
+  assert.match(sourceBuildId, shell.BUILD_ID_PATTERN);
+  assert.ok(html.includes(sourceBuildId));
 });
 
 test('user-facing source exposes no GitHub link or unsafe DOM injection primitive', () => {
@@ -196,11 +219,12 @@ test('responsive and accessibility source contracts remain present', () => {
 
 test('build metadata declares the required IANA timezone', () => {
   assert.equal(shell.BUILD_TIME_ZONE, 'Europe/Nicosia');
-  assert.match(html, /<meta name="build-time-zone" content="Europe\/Nicosia">/);
+  assert.equal(metaContent('build-time-zone'), 'Europe/Nicosia');
 });
 
 test('framework and design-system component versions are internally consistent', () => {
-  assert.equal(readFileSync(join(repositoryRoot, 'FRAMEWORK_VERSION'), 'utf8').trim(), '2.0.0');
+  assert.equal(frameworkVersion, '2.1.0');
+  assert.equal(metaContent('build-version'), frameworkVersion);
   assert.equal(tokenJson.meta.version, '1.2.0');
   assert.match(tokenCss, /Markellos Ecosystem Design Tokens v1\.2\.0/);
   assert.match(designSystemDoc, /\*\*Version:\*\* 1\.2\.0/);
