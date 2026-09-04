@@ -141,7 +141,7 @@ test('canonical header utilities appear in the required logical order', () => {
 
 test('Framework identity replaces visible template identity', () => {
   assert.match(html, /<span class="brand-mark" aria-hidden="true">EF<\/span>/);
-  assert.match(html, /<span class="project-name">Ecosystem Framework<\/span>/);
+  assert.match(html, /<span class="project-name">Ecosystem Framework — The DNA<\/span>/);
   assert.match(html, /Framework Assistant/);
   assert.match(javascript, /assistantName: 'Framework Assistant'/);
   assert.doesNotMatch(html, /Dashboard Template|Template Assistant/);
@@ -230,4 +230,17 @@ test('framework and design-system component versions are internally consistent',
   assert.match(designSystemDoc, /\*\*Version:\*\* 1\.2\.0/);
   assert.match(tokenCss, /--color-neutral-950: #111827;/);
   assert.match(tokenCss, /--color-neutral-0: #ffffff;/);
+});
+
+// FWK-010: separation from the Foundation Systems umbrella.
+test('dashboard contains Framework standards and only a navigation link to the umbrella', () => {
+  assert.match(html, /Ecosystem Framework — The DNA/);
+  assert.match(html, /href="https:\/\/foundations\.markellosecosystem\.com\/"/);
+  for (const other of ['Ecosystem Intelligence', 'Ecosystem Control', 'Ecosystem Core Services', 'Ecosystem Infrastructure', 'Ecosystem Security']) {
+    assert.ok(!html.includes(other), 'Unexpected umbrella card: ' + other);
+  }
+  for (const doc of ['PROJECT_OPERATING_MODEL.md','PROJECT_DASHBOARD_GUIDE.md','UI_UX_RULES.md','docs/INDEX.md','ARCHITECTURE_RULES.md','SECURITY_RULES.md','FRAMEWORK.md','CHANGE_CONTROL.md','DEFINITION_OF_DONE.md','checklists/INITIALIZATION_GATE.md','checklists/DEVELOPMENT_READINESS.md','checklists/FINAL_COMPLETION_GATE.md']) {
+    assert.ok(html.includes('href="./' + doc + '"'), 'Missing Framework link: ' + doc);
+    assert.ok(require('node:fs').existsSync(join(repositoryRoot,doc)), 'Broken Framework document: ' + doc);
+  }
 });

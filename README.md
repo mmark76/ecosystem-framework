@@ -34,7 +34,7 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 
 Το repository περιλαμβάνει το canonical, dependency-free dashboard shell στο root (`index.html`, `dashboard.css`, `dashboard.js`). Αποτελεί πρότυπο για μελλοντική υιοθέτηση σύμφωνα με το `PROJECT_DASHBOARD_GUIDE.md`. Η εφαρμογή του σε υπάρχον repository ή deployment απαιτεί ξεχωριστά εγκεκριμένο task.
 
-Η επίσημη τελική ονομασία και το official reference deployment domain του canonical template είναι `template.markellosecosystem.com`. Η καταγραφή του domain δεν εξουσιοδοτεί deployment: κάθε δημοσίευση, επαναδημοσίευση ή αλλαγή hosting/DNS παραμένει ξεχωριστή εγκεκριμένη operation.
+Το επίσημο dashboard του Ecosystem Framework — The DNA είναι το https://framework.markellosecosystem.com/ και παρουσιάζει αποκλειστικά το Framework. Το umbrella portal [The Foundation Systems](https://foundations.markellosecosystem.com/) ανήκει στο `mmark76/The-Foundation-Systems`. Κάθε δημοσίευση ή αλλαγή hosting/DNS απαιτεί εγκεκριμένη operation· η διαδικασία περιγράφεται στο `DEPLOYMENT.md`.
 
 Περισσότερα: `TEMPLATE_SITE.md`.
 
