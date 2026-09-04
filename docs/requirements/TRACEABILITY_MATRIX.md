@@ -16,6 +16,15 @@
 
 ## Production Deployment Traceability
 
+## Approved dashboard separation (2026-09-04)
+
+| Requirement ID | Scope ID | Design / ADR | Implementation | Test IDs | Evidence | Owner | Status |
+|---|---|---|---|---|---|---|---|
+| FWK-010 | SCOPE-FWK-010 | Owner-approved Foundation Systems separation; existing dashboard shell | `index.html`; `scripts/build-site.cjs`; deployment docs; validation workflow | Dashboard scope and preserved-link regression in `tests/dashboard-shell.test.cjs` | `evidence/framework-dashboard-scope.md`; release report for production | mmark76 | IMPLEMENTED; production verification pending |
+
+The OPS-001 record below is historical template-deployment evidence. Current
+Framework deployment mapping is in `docs/DEPLOYMENT_CLOUDFLARE.md`.
+
 | Requirement ID | Scope ID | Design / ADR | Implementation | Test IDs | Evidence | Owner | Status |
 |---|---|---|---|---|---|---|---|
 | OPS-001 | SCOPE-OPS-001 | `DEPLOYMENT.md`; `docs/DEPLOYMENT_CLOUDFLARE.md`; no new ADR required | Cloudflare Pages project `template-markellosecosystem`; custom domain `template.markellosecosystem.com` | TEST-OPS-001 | `evidence/cloudflare-pages-deployment.md` | mmark76 | VERIFIED |

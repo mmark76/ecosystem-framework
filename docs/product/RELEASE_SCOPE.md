@@ -22,6 +22,14 @@ Approval sources: repository-owner remediation requests dated 2026-08-27 and can
 
 ## Approved Production Deployment Scope
 
+## Approved Foundation Systems separation (2026-09-04)
+
+| ID | Deliverable | Classification | Owner | Notes |
+|---|---|---|---|---|
+| SCOPE-FWK-010 | Retain the Framework-only dashboard, canonical identity, standards and documentation; link to The Foundation Systems; validate and deploy the merged commit through the existing Pages project. | Mandatory | mmark76 | Owner task authorizes PR merge and deployment after both repositories pass review and checks. No Framework DNS or access changes. |
+
+Earlier deployment scope below is retained as historical provenance.
+
 | ID | Deliverable | Classification | Owner | Notes |
 |---|---|---|---|---|
 | SCOPE-OPS-001 | Publish the reference dashboard through Cloudflare Pages at `template.markellosecosystem.com` and record a reproducible deployment and verification procedure. | Mandatory | mmark76 | Direct Upload of the repository-root static site; no build command, backend, or runtime service. |

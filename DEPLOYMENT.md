@@ -1,14 +1,15 @@
-# Deployment
+# Framework deployment
 
-The root of this repository is a static site. Publish the repository root and point `template.markellosecosystem.com` to the deployment.
+The Framework-only dashboard is **https://framework.markellosecosystem.com/**.
+The umbrella is **https://foundations.markellosecosystem.com/** in
+`mmark76/The-Foundation-Systems`.
 
-No build command is required.
+Framework uses the existing Cloudflare Pages Direct Upload project
+`template-markellosecosystem`. Its legacy project name is hosting configuration,
+not the dashboard identity. The existing Framework and template domain
+associations are retained. See [the deployment procedure](docs/DEPLOYMENT_CLOUDFLARE.md).
 
-The production deployment is a Cloudflare Pages Direct Upload project. See
-`docs/DEPLOYMENT_CLOUDFLARE.md` for the project mapping, deployment procedure,
-verification checks, and recovery procedure.
-
-The reusable repository template intentionally does not contain a root `CNAME`
-file. The custom domain is deployment configuration owned by the Cloudflare
-reference deployment, not reusable project source. This prevents repositories
-created from the GitHub template from inheriting `template.markellosecosystem.com`.
+Build from the reviewed, merged commit with
+`node scripts/build-site.cjs <merged-main-sha> <new-output-directory>`.
+GitHub Actions validates and builds but does not deploy. Projects created from
+this repository configure their own hostname; no root CNAME is supplied.
