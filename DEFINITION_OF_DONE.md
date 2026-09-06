@@ -2,6 +2,8 @@
 
 A task is `COMPLETE` only when all applicable conditions below are satisfied.
 
+This is a DNA completion method, not an independent standards catalogue. Applicable cross-cutting requirements come from [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md); applicable security requirements and controls come from [The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield).
+
 ## Functional
 
 - Approved requirement IDs are implemented.
@@ -11,18 +13,16 @@ A task is `COMPLETE` only when all applicable conditions below are satisfied.
 
 ## Architecture
 
-- Code is in the correct module and layer.
-- Module boundaries remain intact.
-- No new circular dependency exists.
-- No unjustified duplication or speculative abstraction was introduced.
-- Significant decisions or deviations are documented.
+- Applicable `ENG-ARCH-*`, `ENG-MAINT-*`, `ENG-API-*`, `ENG-DATA-*`, `ENG-CONF-*`, `ENG-DEP-*`, and `ENG-DEBT-*` requirements are mapped to implementation and verification evidence.
+- Project architecture, interfaces, dependencies, and significant decisions reflect the implemented result.
+- The architecture gate passes and no unresolved or unapproved engineering exception remains.
 
 ## Security and Data
 
-- Relevant threats and controls were reviewed.
-- Authorization and validation are enforced in trusted code.
-- No secrets or sensitive data were exposed.
-- Data, privacy, logging, and retention requirements are satisfied.
+- Applicable Shield requirements and controls are identified by their authoritative references.
+- Project-owned threat, control, exception, verification, and sanitized evidence records are current.
+- The security gate passes and no unresolved or unapproved blocking security exception remains.
+- Applicable non-security data-evolution evidence for `ENG-DATA-001` is complete.
 
 ## UI/UX and Accessibility
 
@@ -42,6 +42,7 @@ For every user-facing change:
 
 ## Quality
 
+- Applicable `ENG-TEST-001`, `ENG-REL-001`, `ENG-OBS-001`, and `ENG-PERF-001` verification is recorded.
 - Formatting passes.
 - Linting passes.
 - Type checking passes where applicable.
@@ -53,6 +54,7 @@ For every user-facing change:
 
 ## Documentation and Evidence
 
+- Applicable `ENG-DOC-001` evidence is complete.
 - Documentation reflects the implementation.
 - Traceability is updated.
 - Test and verification evidence is recorded.

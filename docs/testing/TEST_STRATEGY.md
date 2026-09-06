@@ -1,5 +1,7 @@
 # Test Strategy
 
+This DNA template plans how a project demonstrates `ENG-TEST-001` and other applicable Engineering Standards and Shield requirements. It does not define an independent testing or security standard.
+
 ## Objectives
 Define what confidence each test level must provide.
 

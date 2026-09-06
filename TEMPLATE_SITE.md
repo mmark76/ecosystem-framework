@@ -6,7 +6,7 @@ Markellos ecosystem dashboards.
 ## Current Framework dashboard and historical template domain
 
 The current reference dashboard is **Ecosystem Framework — The DNA** at
-https://framework.markellosecosystem.com/. It presents Framework standards,
+https://framework.markellosecosystem.com/. It presents Framework methodology,
 governance, lifecycle and documentation. The Foundation Systems umbrella belongs
 to its own repository and https://foundations.markellosecosystem.com/.
 

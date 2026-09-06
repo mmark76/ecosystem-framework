@@ -30,6 +30,15 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 
 > Πληρότητα χωρίς τελειομανία, ποιότητα χωρίς ατέρμονη ανάπτυξη και σαφές τέλος χωρίς αποκλεισμό της μελλοντικής εξέλιξης.
 
+## Authority boundary
+
+- [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards) is authoritative for **WHAT** lifecycle-independent, technology-neutral engineering conformity requires. Its stable `ENG-*` identifiers are the source for cross-cutting engineering requirements.
+- Ecosystem Framework — The DNA is authoritative for **HOW** projects adopt, implement, verify, evidence and complete applicable requirements through the lifecycle, operating model, templates, gates, traceability and completion process in this repository.
+- [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) is authoritative for security requirements and controls. The DNA operationalizes their adoption without redefining them.
+- Strong Room remains a concrete, versioned Shield security pattern for appropriate workloads, not a universal Engineering Standard.
+
+This repository's architecture and security compatibility entry points map projects to those authorities; they are not competing standards catalogues.
+
 ## Dashboard reference template
 
 Το repository περιλαμβάνει το canonical, dependency-free dashboard shell στο root (`index.html`, `dashboard.css`, `dashboard.js`). Αποτελεί πρότυπο για μελλοντική υιοθέτηση σύμφωνα με το `PROJECT_DASHBOARD_GUIDE.md`. Η εφαρμογή του σε υπάρχον repository ή deployment απαιτεί ξεχωριστά εγκεκριμένο task.
@@ -45,7 +54,7 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 3. Συμπλήρωσε τα αρχεία στα `docs/product/` και `docs/requirements/`.
 4. Επίλεξε το κατάλληλο app theme και διάβασε τα `UI_UX_RULES.md`, `docs/design/UI_UX_DESIGN_SYSTEM.md` και, για dashboard/landing/main interfaces, το `PROJECT_DASHBOARD_GUIDE.md`.
 5. Διατήρησε το managed shared block του `AGENTS.md` και πρόσθεσε τις project-specific οδηγίες μετά από αυτό.
-6. Κατάγραψε αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
+6. Κατάγραψε τα applicable `ENG-*` IDs και Shield requirements και έπειτα τεκμηρίωσε project-specific αρχιτεκτονική, δεδομένα, threat model και κινδύνους.
 7. Καθόρισε user flows, required UI states και accessibility criteria.
 8. Πάγωσε το release scope.
 9. Πέρασε το `checklists/DEVELOPMENT_READINESS.md`.
@@ -67,8 +76,8 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 | `FRAMEWORK_VERSION` | Μοναδική πηγή αλήθειας για την έκδοση του framework |
 | `CHANGELOG.md` | Ιστορικό εκδόσεων του framework |
 | `UPGRADE_GUIDE.md` | Ασφαλής υιοθέτηση νεότερων template changes από υπάρχοντα repositories |
-| `ARCHITECTURE_RULES.md` | Κανόνες υγιούς και δυναμικής αρχιτεκτονικής |
-| `SECURITY_RULES.md` | Βασικές απαιτήσεις ασφάλειας |
+| `ARCHITECTURE_RULES.md` | Engineering Standards mapping, architecture adoption and verification method |
+| `SECURITY_RULES.md` | Shield authority reference and security adoption/evidence method |
 | `UI_UX_RULES.md` | Υποχρεωτικοί κανόνες ενιαίου UI/UX και accessibility |
 | `PROJECT_DASHBOARD_GUIDE.md` | Κοινό πρότυπο για dashboard, Header, Footer, navigation και version/build identity |
 | `TEMPLATE_SITE.md` | Οδηγίες για το deployable reference dashboard |

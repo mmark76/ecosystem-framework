@@ -233,7 +233,7 @@ test('framework and design-system component versions are internally consistent',
 });
 
 // FWK-010: separation from the Foundation Systems umbrella.
-test('dashboard contains Framework standards and only a navigation link to the umbrella', () => {
+test('dashboard contains Framework methodology and only a navigation link to the umbrella', () => {
   assert.match(html, /Ecosystem Framework — The DNA/);
   assert.match(html, /href="https:\/\/foundations\.markellosecosystem\.com\/"/);
   for (const other of ['Ecosystem Intelligence', 'Ecosystem Control', 'Ecosystem Core Services', 'Ecosystem Infrastructure', 'Ecosystem Security']) {

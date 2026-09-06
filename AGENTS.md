@@ -343,6 +343,10 @@ Build the smallest secure, maintainable, testable, extensible, and consistently 
 
 Optimize for verified requirements, architectural health, security, accessibility, UI/UX coherence, clarity, and controlled completion—not theoretical perfection.
 
+### Standards Authority
+
+Use [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md) as the authoritative source for cross-cutting `ENG-*` requirements and [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) as the authoritative source for security requirements and controls. The instructions below define DNA adoption and delivery behavior; they do not create competing engineering or security standards.
+
 ## 2. Required Reading Order
 
 Before planning or changing code, read the relevant files:
@@ -404,7 +408,7 @@ When a useful future improvement is discovered:
 
 ## 5. Architecture Discipline
 
-Preserve:
+Identify applicable Engineering Standards IDs and preserve their project-specific implementation through:
 
 - one clear responsibility per unit,
 - feature-based or domain-based organization,
@@ -416,7 +420,7 @@ Preserve:
 - human-readable and searchable code,
 - replaceable external providers where replacement risk is meaningful.
 
-Forbidden without an approved exception:
+Treat the following as blocking implementation conditions unless the applicable Engineering Standards requirement has an approved project exception:
 
 - circular dependencies,
 - deep imports into another module's internals,
@@ -444,14 +448,11 @@ Do not stack conditions, overrides, or patches without addressing the underlying
 
 ## 7. Security Discipline
 
-- Treat all external input as untrusted.
-- Enforce authorization in trusted backend code.
-- Never expose secrets in client code, logs, fixtures, or commits.
-- Apply least privilege and secure defaults.
-- Validate inputs at every trust boundary.
-- Use safe error handling and security-relevant logging.
-- Review dependencies and supply-chain risk.
-- Escalate if a critical control cannot be satisfied.
+- Identify the applicable Shield standards, requirement IDs, control baselines, and accepted revisions for the approved scope and risk.
+- Record project-specific threats, controls, owners, verification methods, evidence, risks, and exceptions in the DNA project records.
+- Keep populated configuration and sensitive operational evidence in the adopting project or another approved protected location.
+- Use `SECURITY_RULES.md` for the adoption workflow and `checklists/SECURITY_GATE.md` for the project verification decision.
+- Treat an unsatisfied critical Shield requirement or unapproved critical exception as a blocking condition and escalate it to the responsible owner.
 
 ## 8. UI/UX and Accessibility Discipline
 

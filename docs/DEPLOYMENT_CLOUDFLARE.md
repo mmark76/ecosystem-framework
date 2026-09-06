@@ -44,7 +44,7 @@ Direct Upload follows the [Cloudflare procedure](https://developers.cloudflare.c
   /deployment.json.
 - deployment.json contains the exact merged SHA and the build ID shown in Info
   and the footer.
-- Ecosystem Framework — The DNA identity, Framework-only cards and standards,
+- Ecosystem Framework — The DNA identity, Framework-only cards and methodology,
   lifecycle/change/completion references, and the Foundation Systems link work.
 - Existing PROJECT_OPERATING_MODEL.md, PROJECT_DASHBOARD_GUIDE.md,
   UI_UX_RULES.md and docs/INDEX.md remain reachable.

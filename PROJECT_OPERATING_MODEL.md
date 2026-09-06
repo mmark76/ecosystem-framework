@@ -19,6 +19,10 @@ The framework combines adaptive planning with controlled engineering delivery:
 
 The framework is not pure Scrum, does not require fixed sprints, and does not require Kubernetes or a specific GitOps product.
 
+## Standards and security authority
+
+[Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards) owns cross-cutting normative engineering requirements. [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) owns security requirements and controls. This operating model owns the method used to adopt, implement, verify, evidence and complete applicable requirements; it does not redefine either authority.
+
 ## Canonical Delivery Loop
 
 ```text
@@ -111,7 +115,7 @@ GitOps in this framework means applying the following principles where safe and 
 
 Code, deployment definitions, infrastructure configuration, policy, and operational instructions should be version-controlled when they can be represented safely in Git.
 
-Secrets, credentials, tokens, private keys, and other prohibited sensitive values must not be committed merely to satisfy GitOps.
+Material that applicable Shield requirements exclude from version control is handled through the project's approved protected configuration and evidence locations rather than committed merely to satisfy GitOps.
 
 ### Reviewed change intent
 
@@ -137,20 +141,7 @@ Automation must not bypass required security, approval, maintenance-window, back
 
 Security is integrated into planning and delivery rather than deferred until release.
 
-Applicable work should address:
-
-- threat model impact,
-- identity and access boundaries,
-- secrets handling,
-- dependency and image risk,
-- least privilege,
-- network exposure,
-- data classification and privacy,
-- secure defaults,
-- security regression testing,
-- residual risk acceptance.
-
-Critical or high-impact security deviations require explicit treatment before release unless the human owner formally accepts the residual risk under project governance.
+Projects identify the applicable Shield baseline and requirement IDs, map them to project-owned controls and verification, and record sanitized evidence and exceptions through `SECURITY_RULES.md`, project security records, and `checklists/SECURITY_GATE.md`. The exact security requirements, control definitions, exception conditions, and risk treatment remain authoritative in The Shield.
 
 ## Risk-based Tailoring
 
@@ -209,6 +200,8 @@ Project criticality may require stricter controls than these minimums.
 
 Automation should progressively reduce the chance that an invalid change reaches production.
 
+Projects use this pipeline to demonstrate applicable Engineering Standards requirements, including `ENG-TEST-001`, and applicable Shield requirements. The exact checks and evidence remain project- and risk-specific.
+
 The applicable pipeline may include:
 
 ```text
@@ -244,7 +237,7 @@ Rollback should revert only the resources or state introduced by the failed chan
 
 ## Operations and Observability
 
-Projects should provide observability proportional to their criticality. This can include health checks, logs, metrics, traces, uptime monitoring, alerting, audit events, capacity signals, backup verification, and restore testing.
+Projects operationalize `ENG-OBS-001` with observability proportional to their criticality. Project-specific evidence can include health checks, logs, metrics, traces, uptime monitoring, alerting, audit events, capacity signals, backup verification, and restore testing. Security monitoring and alert requirements remain authoritative in The Shield.
 
 Observability is part of the feedback loop: operational evidence can create risks, issues, backlog items, or roadmap changes.
 
@@ -295,7 +288,7 @@ Use `UPGRADE_GUIDE.md` when applying a newer framework release to an existing re
 
 ## Completion Rule
 
-An iteration, release, or infrastructure change may be declared complete only when its approved mandatory scope and applicable acceptance, architecture, security, quality, production-readiness, evidence, and operational verification gates pass.
+An iteration, release, or infrastructure change may be declared complete only when its approved mandatory scope, applicable Engineering Standards and Shield requirements, and applicable acceptance, architecture, security, quality, production-readiness, evidence, and operational verification gates pass.
 
 Failed deployment is not completion. A successful rollback restores safety but returns the objective to an incomplete, blocked, or replanning state unless the approved objective itself was rollback.
 

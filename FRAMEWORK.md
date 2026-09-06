@@ -4,6 +4,12 @@
 
 This framework defines how a software project is conceived, scoped, experience-designed, architected, secured, developed, tested, deployed, operated, completed, evolved, and retired.
 
+## Authority Boundary
+
+[Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards) defines **what** cross-cutting engineering conformity requires through stable `ENG-*` requirement identifiers. [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) defines security requirements and controls.
+
+The DNA defines **how** projects determine applicability, implement requirements, verify behavior, record evidence and exceptions, pass gates, and reach completion. Project-specific architecture and implementation remain with the project. Strong Room remains a concrete Shield security pattern rather than a universal Engineering Standard.
+
 ## Lifecycle
 
 ```text
@@ -43,6 +49,10 @@ Existing projects do not receive framework changes automatically. Adoption is
 controlled and project-specific through the framework versioning and upgrade
 process.
 
+Engineering Standards and Shield requirements are adopted through this same
+controlled, project-specific process; copying their normative text into project
+methodology does not create a new source of authority.
+
 ## Project Initialization
 
 Immediately after creating a repository from this template, complete
@@ -59,8 +69,8 @@ development readiness.
 1. Product and Scope
 2. Requirements and Traceability
 3. Experience Design, Design System, and Accessibility
-4. Architecture and Codebase Health
-5. Security Assurance
+4. Engineering Standards Adoption and Architecture Evidence
+5. Shield Requirements Adoption and Security Evidence
 6. Data and Privacy
 7. Frontend Engineering
 8. Backend and API Engineering
@@ -126,9 +136,9 @@ Approves scope, priorities, risk acceptance, major product and design decisions,
 Clarifies objectives, requirements, users, journeys, edge cases, accessibility needs, and acceptance criteria.
 
 ### Builder Agent
-Implements approved work using the required architecture, security controls, design system, and verification practices.
+Implements approved work using applicable Engineering Standards requirements, Shield requirements and controls, the approved design system, and DNA verification practices.
 
 ### Verifier Agent
-Checks traceability, architecture, security, UI/UX consistency, accessibility, tests, evidence, and completion.
+Checks applicable requirement traceability, project architecture, Shield security evidence, UI/UX consistency, accessibility, tests, evidence, and completion.
 
 Independent verification is preferred when practical.
