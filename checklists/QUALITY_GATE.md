@@ -1,5 +1,7 @@
 # Quality Gate
 
+This DNA gate records how the project demonstrated applicable Engineering Standards requirements, including `ENG-TEST-001`, `ENG-DOC-001`, `ENG-REL-001`, `ENG-OBS-001`, and `ENG-PERF-001`. The authoritative requirement text remains in [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md).
+
 - [ ] Formatting passes.
 - [ ] Linting passes.
 - [ ] Type checking passes where applicable.

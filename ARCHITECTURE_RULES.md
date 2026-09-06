@@ -1,52 +1,39 @@
-# Architecture and Codebase Health Rules
+# Architecture Adoption and Verification
 
-## 1. Goal
+## Status and authority
 
-Build software that grows through small, clear, controlled changes without architectural chaos, giant files, excessive context requirements, repeated patches, or unnecessary rebuilds.
+This compatibility entry point operationalizes the authoritative requirements in [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md). It is DNA methodology, not an independent normative engineering standard.
 
-## 2. Fundamental Principles
+Engineering Standards defines **what** engineering conformity requires. The DNA defines **how** a project selects an architecture, records decisions, implements boundaries, verifies applicable requirements, manages exceptions, and supplies completion evidence.
 
-- One clear responsibility per file, component, module, or service.
-- One cohesive capability per feature or domain module.
-- One clear location for every responsibility.
-- Prefer feature-based or domain-based organization.
-- Keep shared code genuinely shared.
-- Preserve low coupling and high cohesion.
-- Communicate through clear public interfaces.
-- Keep technical details outside core domain logic where practical.
-- Start with the smallest architecture that supports current needs and the next foreseeable extension.
-- Add abstractions only when actual pressure justifies them.
+## Requirements mapping
 
-## 3. Logical Layers
+| Engineering Standards requirements | DNA operationalization |
+|---|---|
+| `ENG-ARCH-001` through `ENG-ARCH-004` | Record responsibilities, boundaries, dependency direction, architecture drivers, trade-offs, and the smallest justified design in `docs/architecture/`. |
+| `ENG-MAINT-001`, `ENG-MAINT-002`, `ENG-DEBT-001` | Keep changes local and understandable; use the root-cause protocol; record material debt and temporary mitigations in project governance. |
+| `ENG-API-001`, `ENG-API-002` | Document public contracts, consumers, compatibility expectations, migrations, deprecations, and removal conditions. |
+| `ENG-TEST-001`, `ENG-DOC-001`, `ENG-DATA-001` | Define architecture checks, retain current documentation and ADRs, and link schema evolution to tests and recovery decisions. |
+| `ENG-REL-001`, `ENG-OBS-001`, `ENG-PERF-001` | Define project-specific failure behavior, diagnostic evidence, performance criteria, and representative verification. |
+| `ENG-CONF-001`, `ENG-DEP-001`, `ENG-DEP-002` | Document and validate runtime configuration; inventory material dependencies and providers; assign lifecycle ownership; and record justified adapter boundaries. |
+| `ENG-SEC-001` | Identify and satisfy applicable requirements from The Shield through the project's security plan, threat model, gate, and evidence. |
 
-```text
-Presentation / UI
-        ↓
-Application / Use Cases
-        ↓
-Domain / Business Rules
+## Architecture workflow
 
-Infrastructure implements interfaces required by inner layers.
-```
+For each project or material architecture change:
 
-Folder names may vary by language or framework. Dependency direction matters more than names.
+1. Identify the approved requirements, users, data, dependencies, trust boundaries, operational constraints, and failure impact.
+2. Define the system boundary and assign each responsibility, interface, and owned data set to a module or service.
+3. Record permitted dependency direction and the mechanisms used to detect violations where practical.
+4. Select the smallest architecture that satisfies current requirements and the next evidenced extension pressure.
+5. Record significant choices, rejected alternatives, trade-offs, and review triggers as ADRs.
+6. Add tests or static checks for material invariants and regression risks.
+7. Map implementation and verification evidence to the applicable `ENG-*` identifiers.
+8. Run `checklists/ARCHITECTURE_GATE.md` and record any exception before completion.
 
-## 4. Architecture Invariants
+## Non-normative organization examples
 
-- `ARCH-INV-001`: Circular dependencies are forbidden.
-- `ARCH-INV-002`: Domain logic must not depend on UI frameworks.
-- `ARCH-INV-003`: Domain logic must not depend directly on database implementations.
-- `ARCH-INV-004`: Shared code must not depend on feature-specific code.
-- `ARCH-INV-005`: Modules may use only another module's public interface.
-- `ARCH-INV-006`: Business rules must not be duplicated across layers.
-- `ARCH-INV-007`: External providers must be isolated behind adapters when replacement risk is meaningful.
-- `ARCH-INV-008`: Database changes require versioned migrations.
-- `ARCH-INV-009`: Secrets and environment-specific values must remain outside source code.
-- `ARCH-INV-010`: Significant deviations require an approved architecture exception.
-- `ARCH-INV-011`: New features must have an explicit owner module.
-- `ARCH-INV-012`: A feature should be removable or replaceable without collapsing unrelated modules.
-
-## 5. General Repository Pattern
+Folder names depend on the technology and project. A project may organize code around applications, packages, features, domain modules, shared code, and infrastructure adapters when those boundaries reflect real responsibilities.
 
 ```text
 project/
@@ -55,125 +42,42 @@ project/
 ├── src/
 │   ├── app/
 │   ├── features/
-│   ├── entities/
 │   ├── shared/
 │   └── infrastructure/
 ├── tests/
 ├── docs/
-├── scripts/
-└── evidence/
+└── scripts/
 ```
 
-Use only directories the project actually needs.
-
-## 6. Feature Pattern
+A common logical dependency model is:
 
 ```text
-features/
-└── example-feature/
-    ├── ui/
-    ├── application/
-    ├── domain/
-    ├── api/
-    ├── infrastructure/
-    ├── validation/
-    ├── styles/
-    ├── tests/
-    └── index
+Presentation / UI
+        ↓
+Application / Use Cases
+        ↓
+Domain / Business Rules
+
+Infrastructure adapters implement interfaces owned by inner layers.
 ```
 
-The `index` file represents the public interface. Internal files remain private.
+These examples are not prescribed structures. Dependency ownership and clear interfaces matter more than folder names.
 
-## 7. HTML, CSS, and JavaScript / TypeScript
+## Review prompts
 
-### HTML / Markup
-Organize semantic pages, layouts, templates, partials, components, and accessible forms.
+During design and review, examine whether:
 
-### CSS
-Use design tokens, base styles, layouts, components, themes, utilities, and scoped feature styles. Avoid uncontrolled global selectors, high specificity, repeated arbitrary values, and `!important` as a routine fix.
+- a unit changes for unrelated reasons or contains multiple responsibilities;
+- a small change requires excessive context or touches unrelated modules;
+- duplication, branching, hidden side effects, or deep imports obstruct testing;
+- shared code is actually used by independent consumers rather than acting as a dumping ground;
+- an external provider is spread through domain code instead of isolated at an owned boundary;
+- a new feature has an owner, interface, data boundary, tests, documentation, and a removal or replacement strategy where relevant;
+- a correction addresses its responsible cause and includes regression coverage where practical;
+- a full rebuild or new infrastructure layer is being proposed without evidence that smaller changes are insufficient.
 
-### JavaScript / TypeScript
-Separate UI behavior, application use cases, domain rules, data access, infrastructure adapters, validation, state, and utilities. Prefer TypeScript when static checking materially improves safety and maintainability.
+## Verification and completion
 
-## 8. File Size and Complexity
+Architecture evidence normally includes the current system architecture, relevant ADRs, dependency or boundary checks, affected tests, traceability records, and approved exceptions. The exact evidence is project- and risk-specific.
 
-Line counts are warning signals, not absolute laws.
-
-Split a unit when it:
-
-- has multiple responsibilities,
-- changes for unrelated reasons,
-- contains significant duplication,
-- requires excessive context for a small change,
-- is difficult to test independently,
-- has excessive branching or hidden side effects.
-
-## 9. Dependency Rules
-
-Allowed direction should be explicit and enforceable where possible.
-
-Avoid:
-
-- circular imports,
-- deep imports,
-- global mutable state,
-- feature-to-feature internal coupling,
-- hidden runtime dependencies,
-- direct external-provider use throughout business code.
-
-## 10. Shared Code Rule
-
-Move code to `shared` only when:
-
-- it is used by multiple independent modules,
-- its responsibility is stable and generic,
-- moving it does not create a broad dependency hub.
-
-Do not use `shared`, `helpers`, `misc`, or `utils` as dumping grounds.
-
-## 11. Root-Cause and Patch Prevention
-
-Before every correction, inspect:
-
-1. the root cause,
-2. the responsible module,
-3. affected contracts and dependencies,
-4. the structural solution,
-5. the regression test,
-6. possible side effects.
-
-Temporary mitigations must be clearly labeled, time-bounded, owned, and tracked.
-
-## 12. Refactoring
-
-Refactor in small, reviewable steps. Keep refactoring separate from unrelated feature work. Protect behavior with tests. Record major structural decisions.
-
-A full rebuild is a last resort.
-
-## 13. New Feature Gate
-
-Before adding a feature, define:
-
-- purpose and requirement IDs,
-- owner module,
-- data and interfaces,
-- trust boundaries,
-- tests,
-- impact on existing modules,
-- documentation,
-- removal or replacement strategy where relevant.
-
-## 14. Architecture Health Gate
-
-Architecture is sufficient for the current release when:
-
-- all mandatory invariants pass,
-- circular dependencies equal zero,
-- blocking violations equal zero,
-- unapproved exceptions equal zero,
-- required architecture tests pass,
-- architecture documentation is current,
-- the approved release scope is supported,
-- speculative future abstractions were not added.
-
-At that point, stop refactoring for the current release.
+`checklists/ARCHITECTURE_GATE.md` remains the DNA verification gate. Passing it records how the project demonstrated applicable Engineering Standards requirements; it does not create a second source for those requirements.

@@ -1,5 +1,7 @@
 # Security Gate
 
+This DNA gate records project verification of applicable requirements and controls owned by [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield). Its checklist items are adoption prompts, not a competing security standard or control catalogue.
+
 - [ ] Threat model is current.
 - [ ] Assets, sensitive data, actors, and entry points are identified.
 - [ ] Authentication matches the risk profile.

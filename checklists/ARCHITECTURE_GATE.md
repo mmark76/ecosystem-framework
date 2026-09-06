@@ -1,5 +1,7 @@
 # Architecture Gate
 
+This DNA gate verifies the project's implementation of applicable [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md), especially `ENG-ARCH-*`, `ENG-MAINT-*`, `ENG-API-*`, `ENG-DATA-*`, `ENG-DEP-*`, and `ENG-DEBT-*`. Its checklist items are verification prompts, not a separate source of normative requirements.
+
 - [ ] Architecture supports all mandatory release requirements.
 - [ ] System and trust boundaries are documented.
 - [ ] Modules have clear responsibilities and ownership.

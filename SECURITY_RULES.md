@@ -1,117 +1,49 @@
-# Security Rules
+# Security Adoption and Verification
 
-## 1. Security Objective
+## Status and authority
 
-Protect confidentiality, integrity, availability, authenticity, accountability, privacy, and recoverability in proportion to the system's risk and criticality.
+[Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) is authoritative for ecosystem security standards, requirements, controls, IAM, secrets, trust boundaries, threat modelling, secure deployment requirements, security verification, incident response, and security governance.
 
-Absolute security is not a valid completion claim. Security completion means the approved controls for the current scope and risk profile were implemented and verified.
+This DNA document defines how a project adopts, traces, verifies, evidences, and completes applicable Shield requirements. It is not a security standard or control catalogue and does not supersede The Shield.
 
-## 2. Security-by-Design Requirements
+[Strong Room](https://github.com/mmark76/Ecosystem-Security-The-Shield/tree/main/standards/private-app-security-baseline) is a concrete, versioned Shield pattern for appropriate private applications. It is selected only when applicable; it is not a universal project architecture or an Engineering Standards requirement.
 
-Before development:
+## Relationship to Engineering Standards
 
-- identify assets and sensitive data,
-- classify data,
-- identify users, roles, and privileges,
-- define trust boundaries and data flows,
-- create a threat model,
-- define abuse cases,
-- select required controls,
-- record accepted residual risks.
+`ENG-SEC-001` in [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md#eng-sec-001--applicable-shield-requirements) requires systems to satisfy applicable Shield requirements without reproducing them. The DNA supplies the project process and evidence chain for doing so.
 
-## 3. Mandatory Baseline
+## Security adoption workflow
 
-- Secure authentication appropriate to risk.
-- Server-side authorization on every protected action and object.
-- Least privilege for users, services, infrastructure, and administrators.
-- Explicit validation at trust boundaries.
-- Parameterized or safe data-access patterns.
-- Safe output handling and browser protections.
-- Secure session and token lifecycle.
-- Encryption in transit and at rest where required.
-- Secrets outside source code and client bundles.
-- Security-relevant logging without leaking secrets or unnecessary personal data.
-- Rate limits and abuse controls where exposure warrants them.
-- Dependency, secret, and vulnerability scanning.
-- Secure configuration and hardened production defaults.
-- Backup, restore, incident, and vulnerability-management processes.
+For each project or material change:
 
-## 4. Frontend Security
+1. Identify the Shield standards, requirement IDs, control baselines, and accepted revisions applicable to the project's scope and risk.
+2. Record the system risk profile, assets, data, actors, entry points, trust boundaries, abuse cases, and project-specific threats in `docs/security/`.
+3. Map each applicable Shield requirement to project-owned controls, responsible owners, verification methods, and sanitized evidence.
+4. Keep implementation-specific configuration, identities, authorization rules, deployment details, and operational evidence in the adopting project or another approved protected location.
+5. Record inapplicable requirements and exceptions with their rationale, risk, compensating controls, owner, approval, and review or expiry condition under the governing Shield and project process.
+6. Run the relevant security checks and `checklists/SECURITY_GATE.md` before the applicable release or completion decision.
+7. Reassess applicability when architecture, data, identity, exposure, dependencies, deployment, or risk materially changes.
 
-Review:
+## Project records
 
-- semantic and safe markup,
-- XSS and DOM injection risks,
-- Content Security Policy where appropriate,
-- CSRF protections,
-- CORS configuration,
-- cookie attributes,
-- browser storage,
-- third-party scripts,
-- safe links, embeds, and file handling,
-- exposure of source maps and configuration.
+The DNA templates provide locations for project-specific adoption records:
 
-The frontend is not a trusted authorization boundary.
+- `docs/security/SECURITY_PLAN.md` for requirement/control mappings and ownership;
+- `docs/security/THREAT_MODEL.md` for the project threat model;
+- `docs/governance/RISK_REGISTER.md` for visible project risk;
+- `docs/governance/EXCEPTIONS.md` for approved deviations;
+- `docs/requirements/TRACEABILITY_MATRIX.md` for implementation and evidence links;
+- `checklists/SECURITY_GATE.md` for the project verification decision;
+- `docs/operations/OPERATIONS_AND_RECOVERY.md` for project-owned operational and recovery procedures.
 
-## 5. Backend and API Security
+These records operationalize authoritative Shield requirements. Blank templates, checklist completion, or a selected pattern do not by themselves demonstrate security.
 
-Review:
+## Ownership boundary
 
-- object- and function-level authorization,
-- input schemas,
-- mass assignment,
-- rate limiting,
-- replay and idempotency,
-- webhook verification,
-- file upload processing,
-- transaction integrity,
-- background jobs,
-- safe error responses,
-- audit events.
+- The Shield owns shared security requirements, controls, baselines, and security governance.
+- Strong Room remains a Shield-owned implementation pattern.
+- The DNA owns the adoption, traceability, gate, evidence, and completion method.
+- Each project owns its concrete implementation, configuration, threat model, authorization rules, exceptions, and deployment evidence.
+- Infrastructure, Core, Intelligence, and Control retain their domain responsibilities.
 
-## 6. Data Security and Privacy
-
-Define:
-
-- purpose and lawful use,
-- minimization,
-- ownership,
-- classification,
-- access rules,
-- retention,
-- deletion,
-- export and portability,
-- masking or anonymization,
-- backup protection,
-- restore testing,
-- tenant isolation where applicable.
-
-## 7. Infrastructure and Supply Chain
-
-Review:
-
-- network boundaries,
-- origin protection,
-- cloud IAM,
-- environment separation,
-- infrastructure as code,
-- dependency pinning and updates,
-- build pipeline access,
-- artifact provenance and signing where appropriate,
-- third-party services and exit risks,
-- patch and vulnerability response.
-
-## 8. Security Exception Rule
-
-Any unimplemented mandatory control requires:
-
-- exception ID,
-- affected requirement,
-- reason,
-- risk assessment,
-- compensating control,
-- owner,
-- expiry or review date,
-- explicit approval.
-
-Critical unaccepted risks block completion.
+Where DNA and Shield wording appears to conflict, the applicable Shield requirement is authoritative and the conflict is recorded for resolution rather than silently interpreted.

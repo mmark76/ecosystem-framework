@@ -1,5 +1,11 @@
 # Documentation Index
 
+## Normative Authorities
+
+- [Ecosystem Engineering Standards](https://github.com/mmark76/Ecosystem-Engineering-Standards/blob/main/ENGINEERING-REQUIREMENTS.md) — cross-cutting `ENG-*` requirements (**WHAT**).
+- [Ecosystem Security — The Shield](https://github.com/mmark76/Ecosystem-Security-The-Shield) — security requirements and controls.
+- This repository — adoption, implementation, verification, evidence, gates and completion methodology (**HOW**).
+
 ## Initialization
 - `../checklists/INITIALIZATION_GATE.md`
 
