@@ -11,6 +11,11 @@
 
 ## Framework Versioning
 - `../FRAMEWORK_VERSION`
+- `../TEMPLATE_VERSION` — integrated template release version.
+- `../FOUNDATION_SOURCES.md` — sanitized foundation implementation provenance,
+  excluded material and upgrade process.
+- `../FOUNDATION_VERSIONS` — pinned upstream source revisions.
+- `../foundations/` — locally available sanitized reusable foundation material.
 - `../CHANGELOG.md`
 - `../UPGRADE_GUIDE.md`
 

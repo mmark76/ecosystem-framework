@@ -11,6 +11,7 @@
 | OBJ-FWK-001 | Remediate the highest-priority framework audit findings while preserving the template architecture and dashboard standard. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-001 through AC-FWK-004 | VERIFIED |
 | OBJ-FWK-002 | Establish one canonical and portable baseline of global Codex working rules without weakening repository-specific authority. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-005 | VERIFIED |
 | OBJ-FWK-003 | Establish a secure, accessible, dependency-free canonical dashboard shell for future Markellos ecosystem projects. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-006 through AC-FWK-009 | VERIFIED |
+| OBJ-FWK-004 | Integrate sanitized reusable implementations from the four foundations with pinned provenance and a secret-safety readiness gate. | Framework maintenance | Critical | Yes | mmark76 | AC-FWK-010 | IMPLEMENTED |
 
 Approval sources: repository-owner remediation requests dated 2026-08-27 and canonical-dashboard request dated 2026-08-28.
 
@@ -27,6 +28,7 @@ Approval sources: repository-owner remediation requests dated 2026-08-27 and can
 | FWK-007 | OBJ-FWK-003 | Settings must provide accessible accent, background, font, text-size, and spacing controls with reset and close actions, persist only validated appearance preferences locally, and require no backend or dependency. | Critical | Yes | mmark76 | AC-FWK-007 | VERIFIED |
 | FWK-008 | OBJ-FWK-003 | Info must contain the approved informational/legal items, copyright, and build identity; the footer must contain exactly the copyright and build lines; populated builds must use `vX.Y.Z_YYYYMMDD_HHMM_SHA` with `Europe/Nicosia` timestamps and real Git metadata; and no GitHub link may be visible in the dashboard UI. | Critical | Yes | mmark76 | AC-FWK-008 | VERIFIED |
 | FWK-009 | OBJ-FWK-003 | The canonical shell must preserve all required controls without horizontal overflow at narrow, medium, and wide widths; provide explicit partial Greek/English localization behavior; meet applicable WCAG 2.2 AA interaction requirements; and remain a future-adoption standard that does not automatically change existing projects or deployments. | Critical | Yes | mmark76 | AC-FWK-009 | VERIFIED |
+| FWK-010 | OBJ-FWK-004 | The template must locally include sanitized reusable Engineering Standards, Shield and Infrastructure material alongside DNA mechanisms; pin each upstream revision; retain explicit provenance and upgrade guidance; and prevent imported secrets, credential files, public IPs, project-specific values and operational evidence. | Critical | Yes | mmark76 | AC-FWK-010 | IMPLEMENTED |
 
 ## Approved Production Operations Objective
 

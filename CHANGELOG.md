@@ -9,6 +9,27 @@ backward-compatible fixes.
 version. Project/application versions and component versions, such as the design
 system token version, are independent.
 
+## [Integrated Template 2.2.0] - 2026-10-07
+
+### Added
+
+- Sanitized, pinned local implementations from all four foundations, including
+  the Engineering Standards catalogue and the Shield Strong Room templates,
+  executable validators, tests, schemas, capability model, and reusable
+  guidance under `foundations/`.
+- `FOUNDATION_SOURCES.md`, `FOUNDATION_VERSIONS`, and `TEMPLATE_VERSION` for
+  reviewable provenance and independent foundation-version tracking.
+- Dependency-free foundation validation and regression coverage that reject
+  prohibited credential-file names, common credential shapes, and public IPv4
+  literals in imported foundation material.
+
+### Changed
+
+- Infrastructure is now represented by sanitized local adoption guidance rather
+  than a reference-only relationship. The pinned upstream revision contains no
+  reusable executable infrastructure assets; host-specific evidence remains
+  excluded.
+
 ## [2.1.0] - 2026-09-02
 
 ### Added

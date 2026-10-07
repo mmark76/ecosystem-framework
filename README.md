@@ -39,6 +39,20 @@ AI-guided framework for secure, healthy, and consistent application delivery.
 
 This repository's architecture and security compatibility entry points map projects to those authorities; they are not competing standards catalogues.
 
+## Integrated foundation implementations
+
+This is not a reference-only template. It contains sanitized reusable material
+from the four foundations: DNA lifecycle and delivery mechanisms at the root,
+the complete Engineering Standards catalogue, Shield templates/validators/tests/
+schemas/capability model, and sanitized Infrastructure adoption guidance.
+
+Read [`FOUNDATION_SOURCES.md`](FOUNDATION_SOURCES.md) for the exact import map,
+exclusions, and safe upgrade process. [`FOUNDATION_VERSIONS`](FOUNDATION_VERSIONS)
+pins every upstream revision; `TEMPLATE_VERSION` is `2.2.0`, independently of
+the DNA lifecycle-method `FRAMEWORK_VERSION`. All credentials, populated environment files, private keys,
+production selectors, real project endpoints and operational evidence remain
+excluded and must be owned outside the template.
+
 ## Dashboard reference template
 
 Το repository περιλαμβάνει το canonical, dependency-free dashboard shell στο root (`index.html`, `dashboard.css`, `dashboard.js`). Αποτελεί πρότυπο για μελλοντική υιοθέτηση σύμφωνα με το `PROJECT_DASHBOARD_GUIDE.md`. Η εφαρμογή του σε υπάρχον repository ή deployment απαιτεί ξεχωριστά εγκεκριμένο task.
@@ -74,6 +88,10 @@ This repository's architecture and security compatibility entry points map proje
 | `FRAMEWORK.md` | Κύκλος ζωής και συνολικό μοντέλο |
 | `PROJECT_OPERATING_MODEL.md` | Canonical Hybrid Agile + DevOps + GitOps delivery model για software και infrastructure projects |
 | `FRAMEWORK_VERSION` | Μοναδική πηγή αλήθειας για την έκδοση του framework |
+| `TEMPLATE_VERSION` | Έκδοση του integrated reusable template |
+| `FOUNDATION_SOURCES.md` | Provenance, import map, exclusions και ασφαλής adoption process |
+| `FOUNDATION_VERSIONS` | Pinned upstream foundation revisions για ελεγχόμενες αναβαθμίσεις |
+| `foundations/` | Sanitized reusable Engineering Standards, Shield και Infrastructure material |
 | `CHANGELOG.md` | Ιστορικό εκδόσεων του framework |
 | `UPGRADE_GUIDE.md` | Ασφαλής υιοθέτηση νεότερων template changes από υπάρχοντα repositories |
 | `ARCHITECTURE_RULES.md` | Engineering Standards mapping, architecture adoption and verification method |

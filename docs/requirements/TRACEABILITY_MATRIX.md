@@ -13,6 +13,7 @@
 | FWK-007 | SCOPE-FWK-007 | `docs/design/UI_UX_DESIGN_SYSTEM.md`; browser storage is an untrusted local boundary | `index.html`; `dashboard.css`; `dashboard.js` | TEST-FWK-007 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
 | FWK-008 | SCOPE-FWK-008 | `PROJECT_DASHBOARD_GUIDE.md`; `TEMPLATE_SITE.md`; semantic versioning | `index.html`; `dashboard.js`; `FRAMEWORK_VERSION`; `CHANGELOG.md`; `UPGRADE_GUIDE.md` | TEST-FWK-008 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
 | FWK-009 | SCOPE-FWK-009 | `UI_UX_RULES.md`; `docs/design/UI_UX_DESIGN_SYSTEM.md`; `docs/security/THREAT_MODEL.md` | `index.html`; `dashboard.css`; `dashboard.js`; `tests/dashboard-shell.test.cjs`; canonical documentation | TEST-FWK-009 | `evidence/canonical-dashboard-shell-2.0.0.md` | mmark76 | VERIFIED |
+| FWK-010 | SCOPE-FWK-011 | `FOUNDATION_SOURCES.md`; `FOUNDATION_VERSIONS`; no new ADR required | `foundations/`; `scripts/validate-foundations.cjs`; `tests/foundations.test.cjs`; version and upgrade documentation | TEST-FWK-010; imported Shield tests | This change’s final validation report | mmark76 | IMPLEMENTED |
 
 ## Production Deployment Traceability
 
