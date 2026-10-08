@@ -10,6 +10,7 @@ const requiredFiles = [
   'foundations/shield/model/security-capabilities.json',
   'foundations/shield/templates/strong-room/docker/compose.yaml.template',
   'foundations/shield/checks/strong-room/verify-container-hardening.cjs',
+  'foundations/shield/checks/strong-room/verify-approved-main-provenance.cjs',
   'foundations/shield/tests/strong-room.test.cjs',
   'foundations/infrastructure/README.md'
 ];

@@ -26,7 +26,7 @@ Exceptions remain visible and must meet the standard's ownership/expiry rule.
 | AC-03 | SR-03 | Saved connector JWT enforcement and correct app audience; missing/malformed/expired/wrong-audience token rejection at the validator, plus valid authorized traffic. Edge denial alone does not test the connector. |
 | AC-04 | SR-04 | Requested and effective Docker binding agree, host-local HTTP works, IPv4/IPv6 listener and Docker NAT/routing evidence reviewed, public direct-port and alternate-proxy paths cannot serve private content. |
 | AC-05 | SR-05 | Exact reviewed image/platform, fresh vulnerability review, actual process UID/capabilities/NoNewPrivs, read-only root and mount behavior, limits and dedicated network membership verified. |
-| AC-06 | SR-06 | Clean source and runtime allowlist, separately trusted manifest digest, exact membership/size/hashes before/after transfer and against actual mounts and served content. |
+| AC-06 | SR-06 | Independently approved full SHA equals clean `HEAD` and freshly inspected `origin/main` before packaging; runtime allowlist, separately trusted manifest digest, exact membership/size/hashes before/after transfer and against actual mounts and served content. |
 | AC-07 | SR-07 | Previous release and its configuration retained and verified; scoped rollback rehearsal (or first-release unpublish rehearsal) and post-rollback checks. |
 | AC-08 | SR-08 | Local health, authenticated production health/content/asset tests, anonymous private-path denial, host/proxy/IP-family bypass matrix and unchanged unrelated services/routes. |
 | AC-09 | SR-09 | Access logout reached; subsequent fresh private requests and cached/back navigation assessed after documented revocation window; required login/MFA repeats. |

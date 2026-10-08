@@ -23,7 +23,9 @@ The exact reviewed revisions are pinned in [`FOUNDATION_VERSIONS`](FOUNDATION_VE
    locations. Do not commit populated credentials, identity selectors or
    production configuration.
 3. Run `node scripts/validate-foundations.cjs`, then the relevant Shield tests
-   before accepting an upgrade.
+   before accepting an upgrade. For Strong Room production candidates, the
+   adopting project also records the Shield provenance-gate result; Framework
+   does not select its SHA, deployment path, endpoint, identity, or runtime.
 4. Fetch the upstream sources, review the change by pinned revision, update
    `FOUNDATION_VERSIONS`, and record upgrade evidence before changing a pinned
    snapshot. Never overwrite project-owned controls or evidence wholesale.

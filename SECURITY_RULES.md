@@ -22,7 +22,8 @@ For each project or material change:
 4. Keep implementation-specific configuration, identities, authorization rules, deployment details, and operational evidence in the adopting project or another approved protected location.
 5. Record inapplicable requirements and exceptions with their rationale, risk, compensating controls, owner, approval, and review or expiry condition under the governing Shield and project process.
 6. Run the relevant security checks and `checklists/SECURITY_GATE.md` before the applicable release or completion decision.
-7. Reassess applicability when architecture, data, identity, exposure, dependencies, deployment, or risk materially changes.
+7. For a Strong Room production candidate, record the Shield provenance-gate result showing the independently approved full SHA, `HEAD`, and freshly inspected `origin/main` match before packaging; preserve human production approval as a separate project decision.
+8. Reassess applicability when architecture, data, identity, exposure, dependencies, deployment, or risk materially changes.
 
 ## Project records
 

@@ -1,6 +1,6 @@
 # Strong Room verification
 
-Three dependency-free Node.js helpers automate bounded predicates. Two manual
+Four dependency-free Node.js helpers automate bounded predicates. Two manual
 procedures cover checks that require privileged evidence, external vantage points
 or interactive authentication. This is not a monitoring framework.
 
@@ -13,6 +13,7 @@ No commands deploy, change providers, write containers or modify firewall rules.
 node checks/strong-room/verify-origin-binding.cjs DOCKER_CONTEXT CONTAINER_NAME LOCAL_PORT CONTAINER_PORT
 node checks/strong-room/verify-container-hardening.cjs DOCKER_CONTEXT CONTAINER_NAME NETWORK_NAME IMAGE_REFERENCE UID:GID RELEASE_PATH NGINX_CONFIG_PATH EXPECTED_IMAGE_ID
 node checks/strong-room/verify-runtime-artifact.cjs RELEASE_PATH APP_NAME APP_VERSION SOURCE_GIT_SHA MANIFEST_SHA256
+node checks/strong-room/verify-approved-main-provenance.cjs REPOSITORY_ROOT APPROVED_MAIN_SHA
 ```
 
 Replace argument names with app-owned values; quote paths as required by the
@@ -22,6 +23,12 @@ equals the registry index digest or copy it from the running container being
 tested; also verify the selected platform. NGINX_CONFIG_PATH and
 RELEASE_PATH are daemon-host paths, not client paths. The artifact verifier runs
 where the release files exist.
+
+Run the provenance helper immediately before packaging a production candidate,
+after the application owner has refreshed and independently approved
+`origin/main`. It accepts only a clean repository whose `HEAD` and
+`origin/main` both equal the supplied full SHA. It neither fetches, changes
+branches, nor grants production authorization.
 
 The Docker helpers inspect current container metadata into memory only. They
 never echo raw inspect output (which can contain environment secrets), tokens,

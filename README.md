@@ -48,7 +48,7 @@ schemas/capability model, and sanitized Infrastructure adoption guidance.
 
 Read [`FOUNDATION_SOURCES.md`](FOUNDATION_SOURCES.md) for the exact import map,
 exclusions, and safe upgrade process. [`FOUNDATION_VERSIONS`](FOUNDATION_VERSIONS)
-pins every upstream revision; `TEMPLATE_VERSION` is `2.2.0`, independently of
+pins every upstream revision; `TEMPLATE_VERSION` is `2.2.1`, independently of
 the DNA lifecycle-method `FRAMEWORK_VERSION`. All credentials, populated environment files, private keys,
 production selectors, real project endpoints and operational evidence remain
 excluded and must be owned outside the template.
