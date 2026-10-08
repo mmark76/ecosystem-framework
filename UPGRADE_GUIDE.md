@@ -5,7 +5,7 @@ version of this template without overwriting project-specific decisions.
 
 ## Version Sources
 
-- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 2.0.0.
+- `FRAMEWORK_VERSION` is the source of truth for the adopted repository-level framework version. The current framework version is 2.1.0.
 - `CHANGELOG.md` describes framework changes by semantic version.
 - Project/application versions remain project-owned and must continue to drive the visible version/build identity required by `PROJECT_DASHBOARD_GUIDE.md`.
 - Component versions, including the design-system token version, are independent and are updated according to their own compatibility rules.
@@ -33,6 +33,21 @@ unknown prior version as a known release.
 
 Skipping versions is allowed only when all intervening changelog entries and
 upgrade instructions are reviewed and satisfied.
+
+## Adopting the 2.2.0 Integrated Foundations
+
+1. Review `FOUNDATION_SOURCES.md` and `FOUNDATION_VERSIONS` before copying an
+   imported foundation directory into an existing project.
+2. Preserve project-owned configuration, risk decisions, evidence and approved
+   controls. Do not overwrite them with template content.
+3. Use the Shield implementation only after rendering placeholders in protected
+   project locations; populated files, credentials and production evidence must
+   remain out of source control.
+4. Run `node scripts/validate-foundations.cjs` and the applicable imported
+   Shield tests. Review upstream changes by revision before moving a pin.
+5. Set `TEMPLATE_VERSION` to 2.2.0 only after the project’s applicable adoption
+   and readiness criteria pass. `FRAMEWORK_VERSION` remains an independent DNA
+   lifecycle-method version.
 
 ## Adopting the 2.0.0 Canonical Dashboard Shell
 

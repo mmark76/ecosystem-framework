@@ -27,6 +27,7 @@ Approval sources: repository-owner remediation requests dated 2026-08-27 and can
 | ID | Deliverable | Classification | Owner | Notes |
 |---|---|---|---|---|
 | SCOPE-FWK-010 | Retain the Framework-only dashboard, canonical identity, standards and documentation; link to The Foundation Systems; validate and deploy the merged commit through the existing Pages project. | Mandatory | mmark76 | Owner task authorizes PR merge and deployment after both repositories pass review and checks. No Framework DNS or access changes. |
+| SCOPE-FWK-011 | Integrate sanitized reusable implementations from DNA, Engineering Standards, Shield and Infrastructure with reviewable provenance and safety validation. | Mandatory | mmark76 | Excludes secrets, project values and operational evidence. |
 
 Earlier deployment scope below is retained as historical provenance.
 
