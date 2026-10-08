@@ -2,9 +2,15 @@
 
 This is an application-owned procedure to adapt under that app's change controls.
 
-1. Select an exact reviewed source commit. Require clean tracked build inputs,
-   including the generator, and an explicit runtime file allowlist. Exclude Git,
-   evidence, operator docs, credentials and unused source.
+1. Select an exact reviewed source commit. Immediately before packaging a
+   production candidate, refresh and independently inspect `origin/main`, then
+   run `node checks/strong-room/verify-approved-main-provenance.cjs
+   REPOSITORY_ROOT APPROVED_MAIN_SHA`. It fails closed unless the full approved
+   SHA, `HEAD`, and `origin/main` are identical and the repository is clean.
+   Require clean tracked build inputs, including the generator, and an explicit
+   runtime file allowlist. Exclude Git, evidence, operator docs, credentials and
+   unused source. This technical check is evidence only; it never authorizes a
+   production change.
 2. Build reproducibly where possible. Record version, full source SHA and files
    with byte sizes/SHA-256 in deployment-manifest.json. Hash the manifest and
    retain that digest in trusted build/review evidence separately from the release.

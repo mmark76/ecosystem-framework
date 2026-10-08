@@ -5,6 +5,6 @@ DNA_REVISION=16a8ee0eca01d5bd4a7e3d4b04361e03913c64c3
 ENGINEERING_STANDARDS_REPOSITORY=https://github.com/mmark76/Ecosystem-Engineering-Standards.git
 ENGINEERING_STANDARDS_REVISION=dde3096a8ac989419c218cf5429e2652eecb9dd8
 SHIELD_REPOSITORY=https://github.com/mmark76/Ecosystem-Security-The-Shield.git
-SHIELD_REVISION=d684570fb240fc5a84ff175fe6c16daabbbfdaa4
+SHIELD_REVISION=081331e36501c947213cfd4d016a3a36224bd83a
 INFRASTRUCTURE_REPOSITORY=https://github.com/mmark76/ecosystem-infrastructure.git
 INFRASTRUCTURE_REVISION=6f3fd5a9d3f1a1c0e754f26bb9dfe26009aa2ddb

@@ -8,6 +8,7 @@ const { spawnSync } = require('node:child_process');
 const { verifyBinding } = require('../checks/strong-room/verify-origin-binding.cjs');
 const { verifyHardening } = require('../checks/strong-room/verify-container-hardening.cjs');
 const { verifyArtifact, sha256, safePath } = require('../checks/strong-room/verify-runtime-artifact.cjs');
+const { verifyApprovedMainProvenance } = require('../checks/strong-room/verify-approved-main-provenance.cjs');
 const base = resolve(__dirname, '..');
 const expected = {
   network: 'example-private', image: 'example.invalid/static@sha256:' + 'a'.repeat(64),
@@ -121,6 +122,28 @@ for (const [name, change] of [
 test('untrusted or missing expected digest is BLOCKED', t => {
   const f = artifact(t); delete f.exp.manifestHash;
   assert.throws(() => verifyArtifact(f.root, f.exp), { status: 'BLOCKED' });
+});
+function git(directory, args) {
+  const result = spawnSync('git', args, { cwd: directory, encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  return result.stdout.trim();
+}
+test('approved-main provenance requires clean exact HEAD and origin/main', t => {
+  // Keep Git metadata in the writable test workspace: some Windows sandboxes
+  // expose the OS temp directory read-only to nested Git repositories.
+  const root = mkdtempSync(join(base, '.strong-room-provenance-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  git(root, ['init']);
+  git(root, ['config', 'user.email', 'test@example.invalid']);
+  git(root, ['config', 'user.name', 'Strong Room test']);
+  writeFileSync(join(root, 'release.txt'), 'immutable');
+  git(root, ['add', 'release.txt']);
+  git(root, ['commit', '-m', 'test release']);
+  const sha = git(root, ['rev-parse', 'HEAD']);
+  git(root, ['update-ref', 'refs/remotes/origin/main', sha]);
+  assert.match(verifyApprovedMainProvenance(root, sha), /Exact approved origin\/main provenance/);
+  writeFileSync(join(root, 'release.txt'), 'changed');
+  assert.throws(() => verifyApprovedMainProvenance(root, sha), { status: 'FAIL' });
 });
 test('directory symlink/junction inside artifact is rejected', t => {
   const f = artifact(t);

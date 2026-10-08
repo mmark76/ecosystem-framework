@@ -9,6 +9,15 @@ backward-compatible fixes.
 version. Project/application versions and component versions, such as the design
 system token version, are independent.
 
+## [Integrated Template 2.2.1] - 2026-10-08
+
+### Changed
+
+- Updated the pinned, sanitized Shield Strong Room import to add its
+  parameterized exact-approved-main provenance gate. The Framework records how
+  adopting projects trace the gate; Shield remains authoritative for the
+  security requirement and implementation.
+
 ## [Integrated Template 2.2.0] - 2026-10-07
 
 ### Added
